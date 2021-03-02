@@ -1,9 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useTheme, makeStyles } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Typography, colors } from '@material-ui/core';
-import { IconAlternate, SectionHeader } from 'components/molecules';
-import { DescriptionListIcon, Section } from 'components/organisms';
+import React from "react";
+import PropTypes from "prop-types";
+import { useTheme, makeStyles } from "@material-ui/core/styles";
+import { useMediaQuery, Grid, Typography, colors } from "@material-ui/core";
+import { IconAlternate, SectionHeader } from "components/molecules";
+import { DescriptionListIcon, Section } from "components/organisms";
+import "./services.css";
 
 const useStyles = makeStyles(() => ({
   fontWeight900: {
@@ -19,20 +20,20 @@ const useStyles = makeStyles(() => ({
 
 const data = [
   {
-    icon: 'fas fa-layer-group',
-    title: 'Built for developers',
+    icon: "fas fa-layer-group",
+    title: "Great security system.",
     subtitle:
-      'TheFront is built to make your life easier. Variables, build tooling, documentation, and reusable components.',
+      "Golden Global Banking is built to make your life easier. Security is the number one concerns for us.",
   },
   {
-    icon: 'fab fa-sketch',
-    title: 'Designed to be modern',
+    icon: "fab fa-sketch",
+    title: "Designed to be modern",
     subtitle:
-      'Designed with the latest design trends in mind. TheFront feels modern, minimal, and beautiful.',
+      "Designed with the latest design trends in mind. Golden Global follow the new trends all the time. .",
   },
   {
-    icon: 'fas fa-code',
-    title: 'Documentation for everything',
+    icon: "fas fa-code",
+    title: "Timely Technologies ",
     subtitle:
       "We've written extensive documentation for components and tools, so you never have to reverse engineer anything.",
   },
@@ -40,18 +41,19 @@ const data = [
 const Services = ({ className, ...rest }) => {
   const classes = useStyles();
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
-   
+
   const title = (
     <Typography variant="h2" component="span" className={classes.fontWeight900}>
       Build accessible React apps&nbsp;
-      <Typography component="span" variant="inherit" color="primary">with speed</Typography>
+      <span className={"withSpeed"}>with speed</span>
     </Typography>
   );
 
-  const subtitle = 'Build a beautiful, modern website with flexible, fully customizable, atomic Material UI components.';
+  const subtitle =
+    "Build a beautiful, modern website with flexible, fully customizable, atomic Material UI components.";
 
   return (
     <div className={className} {...rest}>
@@ -61,8 +63,8 @@ const Services = ({ className, ...rest }) => {
           subtitle={subtitle}
           align="center"
           titleProps={{
-            variant: 'h2',
-            color: 'textPrimary',
+            variant: "h2",
+            color: "textPrimary",
           }}
           data-aos="fade-up"
         />
@@ -70,7 +72,7 @@ const Services = ({ className, ...rest }) => {
       <Section className={classes.noPaddingTop}>
         <Grid container spacing={isMd ? 4 : 2}>
           {data.map((item, index) => (
-            <Grid key={index} item xs={12} sm={4} data-aos={'fade-up'}>
+            <Grid key={index} item xs={12} sm={4} data-aos={"fade-up"}>
               <DescriptionListIcon
                 title={item.title}
                 subtitle={item.subtitle}
