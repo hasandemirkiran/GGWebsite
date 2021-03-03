@@ -14,7 +14,10 @@ import {
 } from "@material-ui/core";
 import { Image, DarkModeToggler } from "components/atoms";
 import MenuIcon from "@material-ui/icons/Menu";
-import GGLogo from "../../../../assets/images/logo/GGI_LOGO_YATAY.pdf";
+
+//import logo
+import horizontalLightRed from "../../../../assets/images/logo/horizontalLightRed.png";
+import horizontalDarkRed from "../../../../assets/images/logo/horizontalDarkRed.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     height: 28,
     [theme.breakpoints.up("md")]: {
       width: 120,
-      height: 32,
+      height: 50,
     },
   },
   logoImage: {
@@ -77,9 +80,7 @@ const TopBar = ({
             <Image
               className={classes.logoImage}
               src={
-                themeMode === "light"
-                  ? { GGLogo }
-                  : "https://assets.maccarianagency.com/the-front/logos/logo-negative.svg"
+                themeMode === "light" ? horizontalLightRed : horizontalDarkRed
               }
               alt="thefront"
               lazy={false}

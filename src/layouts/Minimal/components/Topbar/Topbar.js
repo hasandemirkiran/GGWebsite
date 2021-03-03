@@ -1,31 +1,36 @@
-import React from 'react';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import { Toolbar } from '@material-ui/core';
-import { Image } from 'components/atoms';
+import React from "react";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import { Toolbar } from "@material-ui/core";
+import { Image } from "components/atoms";
 
-const useStyles = makeStyles(theme => ({
+//import logo
+import horizontalLightRed from "../../../../assets/images/logo/horizontalLightRed.png";
+import horizontalDarkRed from "../../../../assets/images/logo/horizontalDarkRed.png";
+import redSquare from "../../../../assets/images/logo/redSquare.png";
+
+const useStyles = makeStyles((theme) => ({
   toolbar: {
     maxWidth: theme.layout.contentWidth,
-    width: '100%',
-    margin: '0 auto',
+    width: "100%",
+    margin: "0 auto",
     padding: theme.spacing(0, 2),
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       padding: theme.spacing(0, 8),
     },
   },
   logoContainer: {
     width: 100,
     height: 28,
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       width: 120,
-      height: 32,
+      height: 50,
     },
   },
   logoImage: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
 }));
 
@@ -38,7 +43,7 @@ const Topbar = ({ themeMode, className, ...rest }) => {
         <a href="/" title="thefront">
           <Image
             className={classes.logoImage}
-            src={themeMode === 'light' ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg' : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'}
+            src={themeMode === "light" ? horizontalLightRed : horizontalDarkRed}
             alt="thefront"
             lazy={false}
           />

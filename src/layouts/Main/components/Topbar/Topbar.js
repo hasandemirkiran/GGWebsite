@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState } from "react";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   Toolbar,
   Hidden,
@@ -12,97 +12,101 @@ import {
   Typography,
   IconButton,
   Button,
-} from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MenuIcon from '@material-ui/icons/Menu';
-import { Image, DarkModeToggler } from 'components/atoms';
+} from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import MenuIcon from "@material-ui/icons/Menu";
+import { Image, DarkModeToggler } from "components/atoms";
 
-const useStyles = makeStyles(theme => ({
+//import logo
+import horizontalLightRed from "../../../../assets/images/logo/horizontalLightRed.png";
+import horizontalDarkRed from "../../../../assets/images/logo/horizontalDarkRed.png";
+
+const useStyles = makeStyles((theme) => ({
   flexGrow: {
     flexGrow: 1,
   },
   navigationContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   toolbar: {
     zIndex: 999,
     maxWidth: theme.layout.contentWidth,
-    width: '100%',
-    margin: '0 auto',
+    width: "100%",
+    margin: "0 auto",
     padding: theme.spacing(0, 2),
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       padding: theme.spacing(0, 8),
     },
   },
   navLink: {
-    '&:hover': {
+    "&:hover": {
       color: theme.palette.primary.dark,
     },
   },
   listItem: {
-    cursor: 'pointer',
-    '&:hover > .menu-item, &:hover svg': {
+    cursor: "pointer",
+    "&:hover > .menu-item, &:hover svg": {
       color: theme.palette.primary.dark,
     },
-    '&.menu-item--no-dropdown': {
+    "&.menu-item--no-dropdown": {
       paddingRight: 0,
     },
   },
   listItemActive: {
-    '&> .menu-item': {
+    "&> .menu-item": {
       color: theme.palette.primary.dark,
     },
   },
   listItemText: {
-    flex: '0 0 auto',
+    flex: "0 0 auto",
     marginRight: theme.spacing(2),
-    whiteSpace: 'nowrap',
+    whiteSpace: "nowrap",
   },
   listItemButton: {
-    whiteSpace: 'nowrap',
+    whiteSpace: "nowrap",
   },
   listItemIcon: {
-    minWidth: 'auto',
+    minWidth: "auto",
   },
   popover: {
     padding: theme.spacing(4),
     border: theme.spacing(2),
-    boxShadow: '0 0.5rem 2rem 2px rgba(116, 123, 144, 0.09)',
+    boxShadow: "0 0.5rem 2rem 2px rgba(116, 123, 144, 0.09)",
     minWidth: 350,
     marginTop: theme.spacing(2),
   },
   iconButton: {
     marginLeft: theme.spacing(2),
     padding: 0,
-    '&:hover': {
-      background: 'transparent',
+    "&:hover": {
+      background: "transparent",
     },
   },
   expandOpen: {
-    transform: 'rotate(180deg)',
+    transform: "rotate(180deg)",
     color: theme.palette.primary.dark,
   },
   logoContainer: {
     width: 100,
     height: 28,
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       width: 120,
-      height: 32,
+      height: 50,
     },
   },
   logoImage: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
   menu: {
-    display: 'flex',
-    justifyContent: 'space-between',
+    display: "flex",
+    justifyContent: "space-between",
   },
   menuItem: {
     marginRight: theme.spacing(5),
-    '&:last-child': {
+    "&:last-child": {
       marginRight: 0,
     },
   },
@@ -110,11 +114,18 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 0,
   },
   menuGroupTitle: {
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
   },
 }));
 
-const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...rest }) => {
+const Topbar = ({
+  themeMode,
+  themeToggler,
+  onSidebarOpen,
+  pages,
+  className,
+  ...rest
+}) => {
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -134,7 +145,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
   const supportedPages = pages.pages;
   const account = pages.account;
 
-  const MenuGroup = props => {
+  const MenuGroup = (props) => {
     const { item } = props;
     return (
       <List disablePadding>
@@ -151,9 +162,9 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
           <ListItem disableGutters key={i} className={classes.menuGroupItem}>
             <Typography
               variant="body1"
-              component={'a'}
+              component={"a"}
               href={page.href}
-              className={clsx(classes.navLink, 'submenu-item')}
+              className={clsx(classes.navLink, "submenu-item")}
               color="textSecondary"
               onClick={handleClose}
             >
@@ -226,14 +237,14 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
     );
   };
 
-  const renderPages = id => {
-    if (id === 'landing-pages') {
+  const renderPages = (id) => {
+    if (id === "landing-pages") {
       return <LandingPages />;
     }
-    if (id === 'supported-pages') {
+    if (id === "supported-pages") {
       return <SupportedPages />;
     }
-    if (id === 'account') {
+    if (id === "account") {
       return <AccountPages />;
     }
   };
@@ -244,7 +255,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
         <a href="/" title="thefront">
           <Image
             className={classes.logoImage}
-            src={themeMode === 'light' ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg' : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'}
+            src={themeMode === "light" ? horizontalLightRed : horizontalDarkRed}
             alt="thefront"
             lazy={false}
           />
@@ -257,23 +268,23 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
             <div key={page.id}>
               <ListItem
                 aria-describedby={page.id}
-                onClick={e => handleClick(e, page.id)}
+                onClick={(e) => handleClick(e, page.id)}
                 className={clsx(
                   classes.listItem,
-                  openedPopoverId === page.id ? classes.listItemActive : '',
+                  openedPopoverId === page.id ? classes.listItemActive : ""
                 )}
               >
                 <Typography
                   variant="body1"
                   color="textPrimary"
-                  className={clsx(classes.listItemText, 'menu-item')}
+                  className={clsx(classes.listItemText, "menu-item")}
                 >
                   {page.title}
                 </Typography>
                 <ListItemIcon className={classes.listItemIcon}>
                   <ExpandMoreIcon
                     className={
-                      openedPopoverId === page.id ? classes.expandOpen : ''
+                      openedPopoverId === page.id ? classes.expandOpen : ""
                     }
                     fontSize="small"
                   />
@@ -286,12 +297,12 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
                 anchorEl={anchorEl}
                 onClose={handleClose}
                 anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'center',
+                  vertical: "bottom",
+                  horizontal: "center",
                 }}
                 transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'center',
+                  vertical: "top",
+                  horizontal: "center",
                 }}
                 classes={{ paper: classes.popover }}
               >
@@ -299,19 +310,24 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
               </Popover>
             </div>
           ))}
-          <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
-            <DarkModeToggler themeMode={themeMode} onClick={() => themeToggler()} />
+          <ListItem
+            className={clsx(classes.listItem, "menu-item--no-dropdown")}
+          >
+            <DarkModeToggler
+              themeMode={themeMode}
+              onClick={() => themeToggler()}
+            />
           </ListItem>
-          <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
-            <Button
-              variant="outlined"
-              component="a"
-              href="/documentation"
-            >
+          <ListItem
+            className={clsx(classes.listItem, "menu-item--no-dropdown")}
+          >
+            <Button variant="outlined" component="a" href="/documentation">
               Documentation
             </Button>
           </ListItem>
-          <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
+          <ListItem
+            className={clsx(classes.listItem, "menu-item--no-dropdown")}
+          >
             <Button
               variant="contained"
               color="primary"
