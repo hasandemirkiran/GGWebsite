@@ -1,6 +1,6 @@
-import React from 'react';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
+import React from "react";
+import clsx from "clsx";
+import PropTypes from "prop-types";
 import {
   AppBar,
   Box,
@@ -10,46 +10,47 @@ import {
   List,
   ListItem,
   Button,
-  makeStyles
-} from '@material-ui/core';
-import { Image, DarkModeToggler } from 'components/atoms';
-import MenuIcon from '@material-ui/icons/Menu';
+  makeStyles,
+} from "@material-ui/core";
+import { Image, DarkModeToggler } from "components/atoms";
+import MenuIcon from "@material-ui/icons/Menu";
+import GGLogo from "../../../../assets/images/logo/GGI_LOGO_YATAY.pdf";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
   logoContainer: {
     width: 100,
     height: 28,
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       width: 120,
       height: 32,
     },
   },
   logoImage: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
   navigationContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   listItem: {
     paddingRight: 0,
   },
   listItemText: {
-    flex: '0 0 auto',
-    whiteSpace: 'nowrap',
+    flex: "0 0 auto",
+    whiteSpace: "nowrap",
   },
   listItemButton: {
-    whiteSpace: 'nowrap',
+    whiteSpace: "nowrap",
   },
   iconButton: {
     paddingRight: 0,
-    '&:hover': {
-      background: 'transparent',
+    "&:hover": {
+      background: "transparent",
     },
   },
 }));
@@ -75,7 +76,11 @@ const TopBar = ({
           <a href="/" title="thefront">
             <Image
               className={classes.logoImage}
-              src={themeMode === 'light' ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg' : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'}
+              src={
+                themeMode === "light"
+                  ? { GGLogo }
+                  : "https://assets.maccarianagency.com/the-front/logos/logo-negative.svg"
+              }
               alt="thefront"
               lazy={false}
             />
@@ -85,7 +90,9 @@ const TopBar = ({
         <DarkModeToggler themeMode={themeMode} onClick={() => themeToggler()} />
         <Hidden smDown>
           <List disablePadding className={classes.navigationContainer}>
-            <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
+            <ListItem
+              className={clsx(classes.listItem, "menu-item--no-dropdown")}
+            >
               <Button
                 className={classes.listItemText}
                 component="a"
@@ -95,7 +102,9 @@ const TopBar = ({
                 SEE ALL PAGES
               </Button>
             </ListItem>
-            <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
+            <ListItem
+              className={clsx(classes.listItem, "menu-item--no-dropdown")}
+            >
               <Button
                 variant="contained"
                 color="primary"
