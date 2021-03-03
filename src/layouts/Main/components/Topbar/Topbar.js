@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
   flexGrow: {
     flexGrow: 1,
   },
+  topBarButton: {
+    whiteSpace: "nowrap",
+  },
   navigationContainer: {
     display: "flex",
     justifyContent: "space-between",
@@ -321,8 +324,13 @@ const Topbar = ({
           <ListItem
             className={clsx(classes.listItem, "menu-item--no-dropdown")}
           >
-            <Button variant="outlined" component="a" href="/documentation">
-              Documentation
+            <Button
+              variant="outlined"
+              component="a"
+              href="/documentation"
+              className={classes.topBarButton}
+            >
+              Faaliyet Raporu
             </Button>
           </ListItem>
           <ListItem
@@ -336,7 +344,7 @@ const Topbar = ({
               href="https://material-ui.com/store/items/the-front-landing-page/"
               className={classes.listItemButton}
             >
-              Buy Now
+              INTERNET BANKACILIGI
             </Button>
           </ListItem>
         </List>

@@ -10,11 +10,11 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const GetStarted = ({ className, ...rest }) => {
+const GetStarted2 = ({ className, ...rest }) => {
   const classes = useStyles();
-  const title = "Vizyon";
+  const title = "Misyon";
   const subtitle =
-    "Faizsiz finans ilke ve esaslarına uygun faaliyet gösteren, bu konudaki global gelişmeleri yakından takip ederek uygulamalarına entegre eden, paydaşlarına sürekli değer katan, saygın ve öncü bir yatırım bankası olmaktır.";
+    "Faizsiz finans ilke ve esasları doğrultusunda, etik değerlerinin bilincinde olarak, sürekli değer yaratan faaliyetlerimizle müşteri ihtiyaçlarını etkin çözümlerle karşılayan; müşterilerine, çalışanlarına, hissedarlarına kattığı değeri sürekli arttıran, bölgemizin saygın ve etkin bir yatırım bankası olmaktır.";
   const button = (
     <Button
       size="large"
@@ -43,11 +43,11 @@ const GetStarted = ({ className, ...rest }) => {
   );
 };
 
-GetStarted.propTypes = {
+GetStarted2.propTypes = {
   /**
    * External classes
    */
   className: PropTypes.string,
 };
 
-export default GetStarted;
+export default GetStarted2;

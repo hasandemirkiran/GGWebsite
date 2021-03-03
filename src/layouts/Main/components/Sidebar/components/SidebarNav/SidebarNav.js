@@ -1,9 +1,9 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
-import React from 'react';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   List,
   ListItem,
@@ -11,34 +11,33 @@ import {
   ListItemIcon,
   Divider,
   Button,
-} from '@material-ui/core';
-import CloseIcon from '@material-ui/icons/Close';
+} from "@material-ui/core";
+import CloseIcon from "@material-ui/icons/Close";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-  },
+const useStyles = makeStyles((theme) => ({
+  root: {},
   listItem: {
-    flexDirection: 'column',
-    alignItems: 'flex-start',
+    flexDirection: "column",
+    alignItems: "flex-start",
   },
   navLink: {
-    '&:hover': {
+    "&:hover": {
       color: theme.palette.primary.dark,
     },
   },
   listItemIcon: {
-    minWidth: 'auto',
+    minWidth: "auto",
   },
   closeIcon: {
-    justifyContent: 'flex-end',
-    cursor: 'pointer',
+    justifyContent: "flex-end",
+    cursor: "pointer",
   },
   menu: {
-    display: 'flex',
+    display: "flex",
   },
   menuItem: {
     marginRight: theme.spacing(8),
-    '&:last-child': {
+    "&:last-child": {
       marginRight: 0,
     },
   },
@@ -46,14 +45,14 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 0,
   },
   menuGroupTitle: {
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
   },
   divider: {
-    width: '100%',
+    width: "100%",
   },
 }));
 
-const SidebarNav = props => {
+const SidebarNav = (props) => {
   const { pages, onClose, className, ...rest } = props;
   const classes = useStyles();
 
@@ -61,7 +60,7 @@ const SidebarNav = props => {
   const supportedPages = pages.pages;
   const account = pages.account;
 
-  const MenuGroup = props => {
+  const MenuGroup = (props) => {
     const { item } = props;
     return (
       <List disablePadding>
@@ -78,9 +77,9 @@ const SidebarNav = props => {
           <ListItem disableGutters key={i} className={classes.menuGroupItem}>
             <Typography
               variant="body2"
-              component={'a'}
+              component={"a"}
               href={page.href}
-              className={clsx(classes.navLink, 'submenu-item')}
+              className={clsx(classes.navLink, "submenu-item")}
               color="textPrimary"
               onClick={() => onClose()}
             >
@@ -199,7 +198,7 @@ const SidebarNav = props => {
           target="blank"
           href="https://material-ui.com/store/items/the-front-landing-page/"
         >
-          Buy Now
+          INTERNET BANKACILIGI
         </Button>
       </ListItem>
     </List>

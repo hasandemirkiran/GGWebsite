@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import {
   Box,
   Button,
@@ -8,26 +8,26 @@ import {
   List,
   Typography,
   ListItem,
-  makeStyles
-} from '@material-ui/core';
-import NavItem from './components/NavItem';
-import { components } from './data';
+  makeStyles,
+} from "@material-ui/core";
+import NavItem from "./components/NavItem";
+import { components } from "./data";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   mobileDrawer: {
-    width: 256
+    width: 256,
   },
   desktopDrawer: {
     width: 256,
     top: 64,
-    height: 'calc(100% - 64px)'
+    height: "calc(100% - 64px)",
   },
   title: {
     fontWeight: 700,
   },
   navGroup: {
     marginBottom: theme.spacing(2),
-    '&:last-child': {
+    "&:last-child": {
       marginBottom: 0,
     },
   },
@@ -40,17 +40,19 @@ const Navbar = ({ onMobileClose, openMobile }) => {
   const classes = useStyles();
 
   const content = (
-    <Box
-      height="100%"
-      display="flex"
-      flexDirection="column"
-    >
+    <Box height="100%" display="flex" flexDirection="column">
       <Box p={2} paddingBottom={0}>
         <List>
           {components.map((item) => (
             <div key={item.id}>
               <ListItem className={classes.navGroupTitle}>
-                <Typography variant="button" color="textSecondary" className={classes.title}>{item.title}</Typography>
+                <Typography
+                  variant="button"
+                  color="textSecondary"
+                  className={classes.title}
+                >
+                  {item.title}
+                </Typography>
               </ListItem>
               <List disablePadding className={classes.navGroup}>
                 {item.pages.map((page) => (
@@ -68,11 +70,7 @@ const Navbar = ({ onMobileClose, openMobile }) => {
       </Box>
       <Box flexGrow={1} />
       <Box p={2} paddingTop={0}>
-        <Box
-          display="flex"
-          justifyContent="center"
-          mt={2}
-        >
+        <Box display="flex" justifyContent="center" mt={2}>
           <Button
             color="primary"
             component="a"
@@ -83,11 +81,7 @@ const Navbar = ({ onMobileClose, openMobile }) => {
             SEE ALL PAGES
           </Button>
         </Box>
-        <Box
-          display="flex"
-          justifyContent="center"
-          mt={2}
-        >
+        <Box display="flex" justifyContent="center" mt={2}>
           <Button
             color="primary"
             component="a"
@@ -96,7 +90,7 @@ const Navbar = ({ onMobileClose, openMobile }) => {
             target="blank"
             fullWidth
           >
-            BUY NOW
+            INTERNET BANKACILIGI
           </Button>
         </Box>
       </Box>
@@ -132,12 +126,12 @@ const Navbar = ({ onMobileClose, openMobile }) => {
 
 Navbar.propTypes = {
   onMobileClose: PropTypes.func,
-  openMobile: PropTypes.bool
+  openMobile: PropTypes.bool,
 };
 
 Navbar.defaultProps = {
   onMobileClose: () => {},
-  openMobile: false
+  openMobile: false,
 };
 
 export default Navbar;

@@ -114,7 +114,7 @@ const TopBar = ({
                 href="https://material-ui.com/store/items/the-front-landing-page/"
                 className={classes.listItemButton}
               >
-                Buy Now
+                INTERNET BANKACILIGI
               </Button>
             </ListItem>
           </List>
