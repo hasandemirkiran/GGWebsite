@@ -21,21 +21,20 @@ const useStyles = makeStyles(() => ({
 const data = [
   {
     icon: "fas fa-layer-group",
-    title: "Great security system.",
+    title: "Dis Ticaret",
     subtitle:
-      "Golden Global Banking is built to make your life easier. Security is the number one concerns for us.",
+      "Yakın coğrafyamız başta olmak üzere, hedef pazarlardaki dış ticaretin bankacılık hizmetlerine odaklanarak ülkemiz dış ticaret hacminin artırılması",
   },
   {
     icon: "fab fa-sketch",
-    title: "Designed to be modern",
+    title: "Sermaye Piyasalari",
     subtitle:
-      "Designed with the latest design trends in mind. Golden Global follow the new trends all the time. .",
+      "Yurtiçi ve yurtdışında farklı kaynaklardan sağladığı fonlarla para ve sermaye piyasalarının derinleşmesi",
   },
   {
     icon: "fas fa-code",
-    title: "Timely Technologies ",
-    subtitle:
-      "We've written extensive documentation for components and tools, so you never have to reverse engineer anything.",
+    title: "Guncel Teknolojiler",
+    subtitle: "En guncel teknolojiler kullanilarak, yenilikci cozumler",
   },
 ];
 const Services = ({ className, ...rest }) => {
@@ -47,13 +46,14 @@ const Services = ({ className, ...rest }) => {
 
   const title = (
     <Typography variant="h2" component="span" className={classes.fontWeight900}>
-      Build accessible React apps&nbsp;
-      <span className={"withSpeed"}>with speed</span>
+      Tüm faaliyetlerini <span className={"faizsiz"}>faizsiz</span> finans
+      prensiplerine uygun sekilde icra eden ülkemizdeki ilk ve tek yatırım
+      bankası&nbsp;
     </Typography>
   );
 
   const subtitle =
-    "Build a beautiful, modern website with flexible, fully customizable, atomic Material UI components.";
+    "Golden Global Bank; faizsiz finans prensipleri çerçevesinde, müşterilerinin ihtiyaçlarına pratik ve kalıcı çözümler sunarak Türkiye’de ve bölgesinde lider yatırım bankalarının arasına girme hedefiyle yola çıkmıştır.";
 
   return (
     <div className={className} {...rest}>
