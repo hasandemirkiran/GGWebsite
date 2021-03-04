@@ -30,15 +30,15 @@ const IndexView = ({ themeMode }) => {
     <div>
       <Hero themeMode={themeMode} />
       <Services />
-      <SectionAlternate className={classes.sectionAlternateNoPaddingTop}>
+      {/* <SectionAlternate className={classes.sectionAlternateNoPaddingTop}>
         <QuickStart />
-      </SectionAlternate>
+      </SectionAlternate> */}
       <SectionAlternate>
         <Features />
       </SectionAlternate>
-      <Section>
+      {/* <Section>
         <Reviews />
-      </Section>
+      </Section> */}
       <Section className={classes.dividerSection}>
         <Divider />
       </Section>
