@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Divider } from '@material-ui/core';
-import { Topbar, Footer, Sidebar } from './components';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import clsx from "clsx";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { useMediaQuery, Divider } from "@material-ui/core";
+import { Topbar, Footer, Sidebar } from "./components";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    height: '100%',
+    height: "100%",
   },
 }));
 
@@ -15,294 +15,170 @@ const Main = ({ children, themeToggler, themeMode }) => {
   const classes = useStyles();
 
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
   const pages = {
-    landings: {
-      title: 'Landings',
-      id: 'landing-pages',
+    corporate: {
+      title: "Kurumsal",
+      id: "corporate-pages",
       children: {
-        services: {
-          groupTitle: 'Services',
+        corporateChildren: {
+          groupTitle: "Kurumsal",
           pages: [
             {
-              title: 'Coworking',
-              href: '/coworking',
+              title: "Hakkimizda",
+              href: "/coworking",
             },
             {
-              title: 'Rental',
-              href: '/rental',
+              title: "Vizyon ve Misyon",
+              href: "/rental",
             },
             {
-              title: 'Job Listing',
-              href: '/job-listing',
+              title: "Ortaklik Yapisi",
+              href: "/job-listing",
             },
             {
-              title: 'E-Learning',
-              href: '/e-learning',
+              title: "Yonetim Kurulu",
+              href: "/e-learning",
             },
             {
-              title: 'E-commerce',
-              href: '/e-commerce',
+              title: "Degerlerimiz",
+              href: "/e-commerce",
             },
             {
-              title: 'Expo',
-              href: '/expo',
-            },
-          ],
-        },
-        apps: {
-          groupTitle: 'Apps',
-          pages: [
-            {
-              title: 'Desktop App',
-              href: '/desktop-app',
-            },
-            {
-              title: 'Mobile App',
-              href: '/mobile-app',
-            },
-          ],
-        },
-        web: {
-          groupTitle: 'Web',
-          pages: [
-            {
-              title: 'Marketing',
-              href: '/',
-            },
-            {
-              title: 'Overview',
-              href: '/home',
-            },
-            {
-              title: 'Basic',
-              href: '/web-basic',
-            },
-            {
-              title: 'Service',
-              href: '/service',
-            },
-            {
-              title: 'Startup',
-              href: '/startup',
-            },
-            {
-              title: 'Enterprise',
-              href: '/enterprise',
-            },
-            {
-              title: 'Cloud Hosting',
-              href: '/cloud-hosting',
-            },
-            {
-              title: 'Agency',
-              href: '/agency',
-            },
-            {
-              title: 'Design Company',
-              href: '/design-company',
-            },
-            {
-              title: 'Logistics',
-              href: '/logistics',
+              title: "Basinda Biz",
+              href: "/expo",
             },
           ],
         },
       },
     },
-    pages: {
-      title: 'Pages',
-      id: 'supported-pages',
+    services: {
+      title: "Urun ve Hizmetlerimiz",
+      id: "services-pages",
       children: {
-        career: {
-          groupTitle: 'Career',
+        credit: {
+          groupTitle: "Krediler",
           pages: [
             {
-              title: 'Lising',
-              href: '/career-listing',
+              title: "Kurumsal Finansman Destegi",
+              href: "/career-listing",
             },
             {
-              title: 'Lising Minimal',
-              href: '/career-listing-minimal',
+              title: "Kar-Zarar Ortakligi",
+              href: "/career-listing-minimal",
             },
             {
-              title: 'Opening',
-              href: '/career-opening',
+              title: "Ortak Yatirimlar",
+              href: "/career-opening",
+            },
+            {
+              title: "Vadeli Ihracat Finansmani",
+              href: "/career-opening",
+            },
+            {
+              title: "Teminat Mektuplari",
+              href: "/career-opening",
+            },
+            {
+              title: "Kabul/Avans",
+              href: "/career-opening",
+            },
+            {
+              title: "Akreditif",
+              href: "/career-opening",
             },
           ],
         },
-        helpCenter: {
-          groupTitle: 'Help center',
+        trade: {
+          groupTitle: "Dis Ticaret",
           pages: [
             {
-              title: 'Overview',
-              href: '/help-center',
+              title: "Dis Ticaret Odeme Sekli",
+              href: "/help-center",
             },
             {
-              title: 'Article',
-              href: '/help-center-article',
+              title: "Harici Garanti",
+              href: "/help-center-article",
+            },
+            {
+              title: "YP ve TL Transferleri",
+              href: "/help-center-article",
             },
           ],
         },
-        company: {
-          groupTitle: 'Company',
+        treasury: {
+          groupTitle: "Hazine Urunleri",
           pages: [
             {
-              title: 'About',
-              href: '/about',
+              title: "Forward-Vadeli Islemler",
+              href: "/about",
             },
             {
-              title: 'About (Cover)',
-              href: '/about-side-cover',
+              title: "Doviz Islemleri",
+              href: "/about-side-cover",
             },
             {
-              title: 'Pricing',
-              href: '/pricing',
+              title: "Kiymetli Maden Alim-Satim Islemleri",
+              href: "/pricing",
             },
             {
-              title: 'Terms',
-              href: '/company-terms',
+              title: "Menkul Kiymet Islemleri",
+              href: "/company-terms",
             },
           ],
         },
-        contact: {
-          groupTitle: 'Contact',
+        others: {
+          groupTitle: "Diger",
           pages: [
             {
-              title: 'Reach View',
-              href: '/contact-page',
+              title: "Urun ve Hizmet Ucretleme",
+              href: "/contact-page",
             },
             {
-              title: 'Sidebar Map',
-              href: '/contact-sidebar-map',
+              title: "Sozlesme ve Bilgilendirme Formlari",
+              href: "/contact-sidebar-map",
             },
             {
-              title: 'Cover',
-              href: '/contact-page-cover',
-            },
-          ],
-        },
-        blog: {
-          groupTitle: 'Blog',
-          pages: [
-            {
-              title: 'Newsroom',
-              href: '/blog-newsroom',
-            },
-            {
-              title: 'Reach View',
-              href: '/blog-reach-view',
-            },
-            {
-              title: 'Search',
-              href: '/blog-search',
-            },
-            {
-              title: 'Article',
-              href: '/blog-article',
-            },
-          ],
-        },
-        portfolio: {
-          groupTitle: 'Portfolio',
-          pages: [
-            {
-              title: 'Basic',
-              href: '/portfolio-page',
-            },
-            {
-              title: 'Masonry',
-              href: '/portfolio-masonry',
-            },
-            {
-              title: 'Grid View',
-              href: '/portfolio-grid',
-            },
-            {
-              title: 'Parallax Effect',
-              href: '/agency',
+              title: "Musteri Memnuniyet Merkezi",
+              href: "/contact-page-cover",
             },
           ],
         },
       },
     },
-    account: {
-      title: 'Account',
-      id: 'account',
+    contact: {
+      title: "Iletisim",
+      id: "contact-pages",
       children: {
-        settings: {
-          groupTitle: 'Settings',
+        contacts: {
+          groupTitle: "Iletisim",
           pages: [
             {
-              title: 'General',
-              href: '/account/?pid=general',
+              title: "Yasal uyari",
+              href: "/account/?pid=general",
             },
             {
-              title: 'Security',
-              href: '/account/?pid=security',
+              title: "Gizlilik ve Kullanim Kosullari",
+              href: "/account/?pid=security",
             },
             {
-              title: 'Notifications',
-              href: '/account/?pid=notifications',
+              title: "Kisisel Verilerin Korunmasi",
+              href: "/account/?pid=notifications",
             },
             {
-              title: 'Billing',
-              href: '/account/?pid=billing',
-            },
-          ],
-        },
-        signup: {
-          groupTitle: 'Sign up',
-          pages: [
-            {
-              title: 'Simple',
-              href: '/signup-simple',
+              title: "Site Haritasi",
+              href: "/account/?pid=billing",
             },
             {
-              title: 'Cover',
-              href: '/signup-cover',
-            },
-          ],
-        },
-        signin: {
-          groupTitle: 'Sign in',
-          pages: [
-            {
-              title: 'Simple',
-              href: '/signin-simple',
+              title: "Insan Kaynaklari",
+              href: "/account/?pid=billing",
             },
             {
-              title: 'Cover',
-              href: '/signin-cover',
-            },
-          ],
-        },
-        password: {
-          groupTitle: 'Password reset',
-          pages: [
-            {
-              title: 'Simple',
-              href: '/password-reset-simple',
-            },
-            {
-              title: 'Cover',
-              href: '/password-reset-cover',
-            },
-          ],
-        },
-        error: {
-          groupTitle: 'Error',
-          pages: [
-            {
-              title: 'Simple',
-              href: '/not-found',
-            },
-            {
-              title: 'Cover',
-              href: '/not-found-cover',
+              title: "Bize Ulasin",
+              href: "/account/?pid=billing",
             },
           ],
         },
@@ -328,7 +204,12 @@ const Main = ({ children, themeToggler, themeMode }) => {
         [classes.root]: true,
       })}
     >
-      <Topbar onSidebarOpen={handleSidebarOpen} pages={pages} themeMode={themeMode} themeToggler={themeToggler} />
+      <Topbar
+        onSidebarOpen={handleSidebarOpen}
+        pages={pages}
+        themeMode={themeMode}
+        themeToggler={themeToggler}
+      />
       <Sidebar
         onClose={handleSidebarClose}
         open={open}

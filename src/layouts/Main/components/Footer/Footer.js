@@ -102,12 +102,13 @@ const Footer = (props) => {
 
   const classes = useStyles();
 
-  const landings = pages.landings;
-  const supportedPages = pages.pages;
-  const account = pages.account;
+  const corporate = pages.corporate;
+  const services = pages.services;
+  const contact = pages.contact;
 
   const MenuGroup = (props) => {
     const { item } = props;
+    console.log(item, "ITEMM");
     return (
       <List disablePadding className={classes.menuItem}>
         <ListItem disableGutters className={classes.menuGroupItem}>
@@ -131,60 +132,41 @@ const Footer = (props) => {
     );
   };
 
-  const LandingPages = () => {
-    const { services, apps, web } = landings.children;
+  const CorporatePages = () => {
+    const { corporateChildren } = corporate.children;
     return (
       <div className={classes.menu}>
         <div>
-          <MenuGroup item={services} />
-          <MenuGroup item={apps} />
-        </div>
-        <div>
-          <MenuGroup item={web} />
+          <MenuGroup item={corporateChildren} />
         </div>
       </div>
     );
   };
 
-  const SupportedPages = () => {
-    const {
-      career,
-      helpCenter,
-      company,
-      contact,
-      blog,
-      portfolio,
-    } = supportedPages.children;
+  const ServicesPages = () => {
+    const { credit, trade, treasury, others } = services.children;
     return (
       <div className={classes.menu}>
         <div>
-          <MenuGroup item={career} />
-          <MenuGroup item={helpCenter} />
+          <MenuGroup item={credit} />
         </div>
         <div>
-          <MenuGroup item={company} />
-          <MenuGroup item={contact} />
+          <MenuGroup item={trade} />
+          <MenuGroup item={treasury} />
         </div>
         <div>
-          <MenuGroup item={blog} />
-          <MenuGroup item={portfolio} />
+          <MenuGroup item={others} />
         </div>
       </div>
     );
   };
 
-  const AccountPages = () => {
-    const { settings, signup, signin, password, error } = account.children;
+  const ContactPages = () => {
+    const { contacts } = contact.children;
     return (
       <div className={classes.menu}>
         <div>
-          <MenuGroup item={settings} />
-          <MenuGroup item={signup} />
-        </div>
-        <div>
-          <MenuGroup item={signin} />
-          <MenuGroup item={password} />
-          <MenuGroup item={error} />
+          <MenuGroup item={contacts} />
         </div>
       </div>
     );
@@ -227,13 +209,13 @@ const Footer = (props) => {
           <Grid item xs={12} md={10} className={classes.menuListContainer}>
             <Grid container spacing={0}>
               <Grid item>
-                <LandingPages />
+                <CorporatePages />
               </Grid>
               <Grid item>
-                <SupportedPages />
+                <ServicesPages />
               </Grid>
               <Grid item>
-                <AccountPages />
+                <ContactPages />
               </Grid>
             </Grid>
           </Grid>

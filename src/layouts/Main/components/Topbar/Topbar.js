@@ -144,9 +144,9 @@ const Topbar = ({
     setOpenedPopoverId(null);
   };
 
-  const landings = pages.landings;
-  const supportedPages = pages.pages;
-  const account = pages.account;
+  const corporate = pages.corporate;
+  const services = pages.services;
+  const contact = pages.contact;
 
   const MenuGroup = (props) => {
     const { item } = props;
@@ -179,76 +179,55 @@ const Topbar = ({
     );
   };
 
-  const LandingPages = () => {
-    const { services, apps, web } = landings.children;
+  const CorporatePages = () => {
+    const { corporate } = corporate.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
-          <MenuGroup item={services} />
-          <MenuGroup item={apps} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={web} />
+          <MenuGroup item={corporate} />
         </div>
       </div>
     );
   };
 
-  const SupportedPages = () => {
-    const {
-      career,
-      helpCenter,
-      company,
-      contact,
-      blog,
-      portfolio,
-    } = supportedPages.children;
+  const ServicesPages = () => {
+    const { credit, trade, treasury, others } = services.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
-          <MenuGroup item={career} />
-          <MenuGroup item={helpCenter} />
+          <MenuGroup item={credit} />
         </div>
         <div className={classes.menuItem}>
-          <MenuGroup item={company} />
-          <MenuGroup item={contact} />
+          <MenuGroup item={trade} />
+          <MenuGroup item={treasury} />
         </div>
         <div className={classes.menuItem}>
-          <MenuGroup item={blog} />
-          <MenuGroup item={portfolio} />
+          <MenuGroup item={others} />
         </div>
       </div>
     );
   };
 
-  const AccountPages = () => {
-    const { settings, signup, signin, password, error } = account.children;
+  const ContactPages = () => {
+    const { contacts } = contacts.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
-          <MenuGroup item={settings} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={signup} />
-          <MenuGroup item={signin} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={password} />
-          <MenuGroup item={error} />
+          <MenuGroup item={contacts} />
         </div>
       </div>
     );
   };
 
   const renderPages = (id) => {
-    if (id === "landing-pages") {
-      return <LandingPages />;
+    if (id === "corporate-pages") {
+      return <CorporatePages />;
     }
-    if (id === "supported-pages") {
-      return <SupportedPages />;
+    if (id === "services-pages") {
+      return <ServicesPages />;
     }
-    if (id === "account") {
-      return <AccountPages />;
+    if (id === "contact-pages") {
+      return <ContactPages />;
     }
   };
 
@@ -267,7 +246,7 @@ const Topbar = ({
       <div className={classes.flexGrow} />
       <Hidden smDown>
         <List disablePadding className={classes.navigationContainer}>
-          {[landings, supportedPages, account].map((page, i) => (
+          {[corporate, services, contact].map((page, i) => (
             <div key={page.id}>
               <ListItem
                 aria-describedby={page.id}
