@@ -111,7 +111,7 @@ const TopBar = ({
                 color="primary"
                 component="a"
                 target="blank"
-                href="https://material-ui.com/store/items/the-front-landing-page/"
+                href="https://isube.goldenglobalbank.com.tr/Login/CorporateInitialLogin"
                 className={classes.listItemButton}
               >
                 INTERNET BANKACILIGI

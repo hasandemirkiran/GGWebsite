@@ -196,7 +196,7 @@ const SidebarNav = (props) => {
           fullWidth
           component="a"
           target="blank"
-          href="https://material-ui.com/store/items/the-front-landing-page/"
+          href="https://isube.goldenglobalbank.com.tr/Login/CorporateInitialLogin"
         >
           INTERNET BANKACILIGI
         </Button>

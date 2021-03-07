@@ -85,7 +85,7 @@ const Navbar = ({ onMobileClose, openMobile }) => {
           <Button
             color="primary"
             component="a"
-            href="https://material-ui.com/store/items/the-front-landing-page/"
+            href="https://isube.goldenglobalbank.com.tr/Login/CorporateInitialLogin"
             variant="contained"
             target="blank"
             fullWidth
