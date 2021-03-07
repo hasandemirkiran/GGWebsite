@@ -7,8 +7,7 @@ import { Image } from "components/atoms";
 
 //import logo
 import horizontalLightRed from "../../../../assets/images/logo/horizontalLightRed.png";
-import horizontalDarkRed from "../../../../assets/images/logo/horizontalDarkRed.png";
-import redSquare from "../../../../assets/images/logo/redSquare.png";
+import horizontalDarkRed from "../../../../assets/images/logo/horizontal_white_none.png";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {

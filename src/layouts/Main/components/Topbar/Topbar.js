@@ -19,7 +19,7 @@ import { Image, DarkModeToggler } from "components/atoms";
 
 //import logo
 import horizontalLightRed from "../../../../assets/images/logo/horizontalLightRed.png";
-import horizontalDarkRed from "../../../../assets/images/logo/horizontalDarkRed.png";
+import horizontalDarkRed from "../../../../assets/images/logo/horizontal_white_none.png";
 
 const useStyles = makeStyles((theme) => ({
   flexGrow: {

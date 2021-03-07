@@ -17,7 +17,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 //import logo
 import horizontalLightRed from "../../../../assets/images/logo/horizontalLightRed.png";
-import horizontalDarkRed from "../../../../assets/images/logo/horizontalDarkRed.png";
+import horizontalDarkRed from "../../../../assets/images/logo/horizontal_white_none.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -7,6 +7,10 @@ import { SectionHeader, TypedText } from "components/molecules";
 import { HeroShaped } from "components/organisms";
 import "./hero.css";
 
+// import image
+import CollageLight from "../../../../assets/images/collage_light.png";
+import CollageDark from "../../../../assets/images/collage_dark.png";
+
 const useStyles = makeStyles((theme) => ({
   fontWeight900: {
     fontWeight: 900,
@@ -42,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   imageAnimation: {
-    background: `url("https://assets.maccarianagency.com/the-front/web-screens/home/home-hero-bg-light.png")`,
+    background: `url(${CollageLight})`,
     backgroundRepeat: "repeat",
     backgroundAttachment: "scroll",
     backgroundSize: "400px auto",
@@ -58,7 +62,20 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   imageAnimationDark: {
-    background: `url("https://assets.maccarianagency.com/the-front/web-screens/home/home-hero-bg-dark.png")`,
+    background: `url(${CollageDark})`,
+    backgroundRepeat: "repeat",
+    backgroundAttachment: "scroll",
+    backgroundSize: "400px auto",
+    animation: `$slideshow 50s linear infinite`,
+    width: "600%",
+    height: "600%",
+    backgroundColor: theme.palette.alternate.dark,
+    top: "-25%",
+    left: "-100%",
+    position: "absolute",
+    [theme.breakpoints.up("sm")]: {
+      backgroundSize: "800px auto",
+    },
   },
   "@keyframes slideshow": {
     "0%": {

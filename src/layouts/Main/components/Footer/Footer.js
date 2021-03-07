@@ -17,7 +17,7 @@ import PinterestIcon from "@material-ui/icons/Pinterest";
 import { Image } from "components/atoms";
 
 //import logo
-import horizontalDarkRed from "../../../../assets/images/logo/horizontalDarkRed.png";
+import horizontalDarkRed from "../../../../assets/images/logo/horizontal_white_none.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
