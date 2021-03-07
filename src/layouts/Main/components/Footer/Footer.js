@@ -145,6 +145,7 @@ const Footer = (props) => {
 
   const ServicesPages = () => {
     const { credit, trade, treasury, others } = services.children;
+    const { contacts } = contact.children;
     return (
       <div className={classes.menu}>
         <div>
@@ -156,21 +157,22 @@ const Footer = (props) => {
         </div>
         <div>
           <MenuGroup item={others} />
-        </div>
-      </div>
-    );
-  };
-
-  const ContactPages = () => {
-    const { contacts } = contact.children;
-    return (
-      <div className={classes.menu}>
-        <div>
           <MenuGroup item={contacts} />
         </div>
       </div>
     );
   };
+
+  // const ContactPages = () => {
+  //   const { contacts } = contact.children;
+  //   return (
+  //     <div className={classes.menu}>
+  //       <div>
+  //         <MenuGroup item={contacts} />
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   return (
     <div {...rest} className={clsx(classes.root, className)}>
@@ -213,9 +215,6 @@ const Footer = (props) => {
               </Grid>
               <Grid item>
                 <ServicesPages />
-              </Grid>
-              <Grid item>
-                <ContactPages />
               </Grid>
             </Grid>
           </Grid>

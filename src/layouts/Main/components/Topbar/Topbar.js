@@ -180,11 +180,11 @@ const Topbar = ({
   };
 
   const CorporatePages = () => {
-    const { corporate } = corporate.children;
+    const { corporateChildren } = corporate.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
-          <MenuGroup item={corporate} />
+          <MenuGroup item={corporateChildren} />
         </div>
       </div>
     );
@@ -209,7 +209,7 @@ const Topbar = ({
   };
 
   const ContactPages = () => {
-    const { contacts } = contacts.children;
+    const { contacts } = contact.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
