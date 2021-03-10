@@ -17,8 +17,8 @@ const WhoWeAre = (props) => {
       <Grid container spacing={isMd ? 4 : 2}>
         <Grid item xs={12} sm={6} data-aos="fade-up">
           <SectionHeader
-            title="Who are we?"
-            subtitle="Our sign up is dead simple. We only require your basic company information and what type of data storage you want. Our sign up is dead simple. We only require your basic company information and what type of data storage you want."
+            title="Vizyon"
+            subtitle="Faizsiz finans ilke ve esaslarına uygun faaliyet gösteren, bu konudaki global gelişmeleri yakından takip ederek uygulamalarına entegre eden, paydaşlarına sürekli değer katan, saygın ve öncü bir yatırım bankası olmaktır."
             disableGutter
             align="left"
             subtitleProps={{
@@ -29,8 +29,8 @@ const WhoWeAre = (props) => {
         </Grid>
         <Grid item xs={12} sm={6} data-aos="fade-up">
           <SectionHeader
-            title="What’s up with the name?"
-            subtitle="We support bulk uploading via SQL, integrations with most data storage products, or you can use our API. Simply select where you'd like to transfer your data and we'll being the process of migrating it instantly."
+            title="Misyon"
+            subtitle="Faizsiz finans ilke ve esasları doğrultusunda, etik değerlerinin bilincinde olarak, sürekli değer yaratan faaliyetlerimizle müşteri ihtiyaçlarını etkin çözümlerle karşılayan; müşterilerine, çalışanlarına, hissedarlarına kattığı değeri sürekli arttıran, bölgemizin saygın ve etkin bir yatırım bankası olmaktır."
             disableGutter
             align="left"
             subtitleProps={{

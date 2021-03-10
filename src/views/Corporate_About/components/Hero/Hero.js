@@ -6,6 +6,9 @@ import { Image } from "components/atoms";
 import { SectionHeader } from "components/molecules";
 import { Section } from "components/organisms";
 
+//import svg background
+import svgBackground from "../../../../assets/images/Protruding-Squares.png";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
@@ -42,8 +45,8 @@ const Hero = (props) => {
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Image
-        src="https://assets.maccarianagency.com/the-front/photos/about/hero-image.png"
-        srcSet="https://assets.maccarianagency.com/the-front/photos/about/hero-image.png 2x"
+        src={svgBackground}
+        srcSet={svgBackground}
         alt="About"
         className={classes.image}
         lazyProps={{

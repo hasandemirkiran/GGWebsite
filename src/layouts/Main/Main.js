@@ -33,7 +33,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Vizyon ve Misyon",
-              href: "/rental",
+              href: "/vision-mission",
             },
             {
               title: "Ortaklik Yapisi",

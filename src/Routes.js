@@ -1,12 +1,16 @@
 /**
  * Caution: Consider this file when using react-scripts
- * 
+ *
  * You may delete this file and its occurrences from the project filesystem if you are using GatsbyJS or NextJS version
  */
-import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import WithLayout from 'WithLayout';
-import { Main as MainLayout, Minimal as MinimalLayout, DocsLayout } from './layouts';
+import React from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import WithLayout from "WithLayout";
+import {
+  Main as MainLayout,
+  Minimal as MinimalLayout,
+  DocsLayout,
+} from "./layouts";
 
 import {
   Home as HomeView,
@@ -56,7 +60,8 @@ import {
   Documentation as DocumentationView,
   NotFound as NotFoundView,
   NotFoundCover as NotFoundCoverView,
-} from './views';
+  Vision as VisionView,
+} from "./views";
 
 const Routes = () => {
   return (
@@ -64,7 +69,7 @@ const Routes = () => {
       <Route
         exact
         path="/"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={IndexView}
@@ -75,7 +80,7 @@ const Routes = () => {
       <Route
         exact
         path="/home"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={HomeView}
@@ -86,7 +91,7 @@ const Routes = () => {
       <Route
         exact
         path="/career-listing"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={CareerListingView}
@@ -97,7 +102,7 @@ const Routes = () => {
       <Route
         exact
         path="/career-listing-minimal"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={CareerListingMinimalView}
@@ -108,7 +113,7 @@ const Routes = () => {
       <Route
         exact
         path="/career-opening"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={CareerOpeningView}
@@ -119,7 +124,7 @@ const Routes = () => {
       <Route
         exact
         path="/contact-page"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={ContactPageView}
@@ -130,7 +135,7 @@ const Routes = () => {
       <Route
         exact
         path="/coworking"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={CoworkingView}
@@ -141,7 +146,7 @@ const Routes = () => {
       <Route
         exact
         path="/e-learning"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={ElearningView}
@@ -152,7 +157,7 @@ const Routes = () => {
       <Route
         exact
         path="/enterprise"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={EnterpriseView}
@@ -163,7 +168,7 @@ const Routes = () => {
       <Route
         exact
         path="/service"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={ServiceView}
@@ -174,7 +179,7 @@ const Routes = () => {
       <Route
         exact
         path="/web-basic"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={WebBasicView}
@@ -185,7 +190,7 @@ const Routes = () => {
       <Route
         exact
         path="/desktop-app"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={DesktopAppView}
@@ -196,7 +201,7 @@ const Routes = () => {
       <Route
         exact
         path="/expo"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={ExpoView}
@@ -207,7 +212,7 @@ const Routes = () => {
       <Route
         exact
         path="/agency"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={AgencyView}
@@ -218,7 +223,7 @@ const Routes = () => {
       <Route
         exact
         path="/startup"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={StartupView}
@@ -229,7 +234,7 @@ const Routes = () => {
       <Route
         exact
         path="/design-company"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={DesignCompanyView}
@@ -240,7 +245,7 @@ const Routes = () => {
       <Route
         exact
         path="/mobile-app"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={MobileAppView}
@@ -251,7 +256,7 @@ const Routes = () => {
       <Route
         exact
         path="/job-listing"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={JobListingView}
@@ -261,11 +266,11 @@ const Routes = () => {
       />
       <Route
         exact
-        path="/rental"
-        render={matchProps => (
+        path="/vision-mission"
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
-            component={RentalView}
+            component={VisionView}
             layout={MainLayout}
           />
         )}
@@ -273,7 +278,7 @@ const Routes = () => {
       <Route
         exact
         path="/cloud-hosting"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={CloudHostingView}
@@ -284,7 +289,7 @@ const Routes = () => {
       <Route
         exact
         path="/logistics"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={LogisticsView}
@@ -295,7 +300,7 @@ const Routes = () => {
       <Route
         exact
         path="/e-commerce"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={EcommerceView}
@@ -306,7 +311,7 @@ const Routes = () => {
       <Route
         exact
         path="/pricing"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={PricingView}
@@ -317,7 +322,7 @@ const Routes = () => {
       <Route
         exact
         path="/about"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={AboutView}
@@ -328,7 +333,7 @@ const Routes = () => {
       <Route
         exact
         path="/help-center"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={HelpCenterView}
@@ -339,7 +344,7 @@ const Routes = () => {
       <Route
         exact
         path="/help-center-article"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={HelpCenterArticleView}
@@ -350,7 +355,7 @@ const Routes = () => {
       <Route
         exact
         path="/portfolio-page"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={PortfolioPageView}
@@ -361,7 +366,7 @@ const Routes = () => {
       <Route
         exact
         path="/portfolio-masonry"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={PortfolioMasonryView}
@@ -372,7 +377,7 @@ const Routes = () => {
       <Route
         exact
         path="/portfolio-grid"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={PortfolioGridView}
@@ -383,7 +388,7 @@ const Routes = () => {
       <Route
         exact
         path="/company-terms"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={CompanyTermsView}
@@ -394,7 +399,7 @@ const Routes = () => {
       <Route
         exact
         path="/contact-sidebar-map"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={ContactPageSidebarMapView}
@@ -405,7 +410,7 @@ const Routes = () => {
       <Route
         exact
         path="/contact-page-cover"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={ContactPageCoverView}
@@ -416,7 +421,7 @@ const Routes = () => {
       <Route
         exact
         path="/about-side-cover"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={AboutSideCoverView}
@@ -427,7 +432,7 @@ const Routes = () => {
       <Route
         exact
         path="/blog-search"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={BlogSearchView}
@@ -438,7 +443,7 @@ const Routes = () => {
       <Route
         exact
         path="/blog-newsroom"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={BlogNewsroomView}
@@ -449,7 +454,7 @@ const Routes = () => {
       <Route
         exact
         path="/blog-article"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={BlogArticleView}
@@ -460,7 +465,7 @@ const Routes = () => {
       <Route
         exact
         path="/blog-reach-view"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={BlogReachViewView}
@@ -471,7 +476,7 @@ const Routes = () => {
       <Route
         exact
         path="/password-reset-cover"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={PasswordResetCoverView}
@@ -482,7 +487,7 @@ const Routes = () => {
       <Route
         exact
         path="/password-reset-simple"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={PasswordResetSimpleView}
@@ -493,7 +498,7 @@ const Routes = () => {
       <Route
         exact
         path="/signin-simple"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={SigninSimpleView}
@@ -504,7 +509,7 @@ const Routes = () => {
       <Route
         exact
         path="/signin-cover"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={SigninCoverView}
@@ -515,7 +520,7 @@ const Routes = () => {
       <Route
         exact
         path="/signup-simple"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={SignupSimpleView}
@@ -526,7 +531,7 @@ const Routes = () => {
       <Route
         exact
         path="/signup-cover"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={SignupCoverView}
@@ -537,7 +542,7 @@ const Routes = () => {
       <Route
         exact
         path="/account"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={AccountView}
@@ -548,7 +553,7 @@ const Routes = () => {
       <Route
         exact
         path="/documentation"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={DocumentationView}
@@ -559,7 +564,7 @@ const Routes = () => {
       <Route
         exact
         path="/not-found"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={NotFoundView}
@@ -570,7 +575,7 @@ const Routes = () => {
       <Route
         exact
         path="/not-found-cover"
-        render={matchProps => (
+        render={(matchProps) => (
           <WithLayout
             {...matchProps}
             component={NotFoundCoverView}
