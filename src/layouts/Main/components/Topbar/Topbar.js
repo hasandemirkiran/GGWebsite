@@ -146,6 +146,7 @@ const Topbar = ({
 
   const corporate = pages.corporate;
   const services = pages.services;
+  const investor = pages.investor;
   const contact = pages.contact;
 
   const MenuGroup = (props) => {
@@ -208,6 +209,17 @@ const Topbar = ({
     );
   };
 
+  const InvestorPages = () => {
+    const { investorChildren } = investor.children;
+    return (
+      <div className={classes.menu}>
+        <div className={classes.menuItem}>
+          <MenuGroup item={investorChildren} />
+        </div>
+      </div>
+    );
+  };
+
   const ContactPages = () => {
     const { contacts } = contact.children;
     return (
@@ -225,6 +237,9 @@ const Topbar = ({
     }
     if (id === "services-pages") {
       return <ServicesPages />;
+    }
+    if (id === "investor-pages") {
+      return <InvestorPages />;
     }
     if (id === "contact-pages") {
       return <ContactPages />;
@@ -246,7 +261,7 @@ const Topbar = ({
       <div className={classes.flexGrow} />
       <Hidden smDown>
         <List disablePadding className={classes.navigationContainer}>
-          {[corporate, services, contact].map((page, i) => (
+          {[corporate, services, investor, contact].map((page, i) => (
             <div key={page.id}>
               <ListItem
                 aria-describedby={page.id}
@@ -292,15 +307,7 @@ const Topbar = ({
               </Popover>
             </div>
           ))}
-          <ListItem
-            className={clsx(classes.listItem, "menu-item--no-dropdown")}
-          >
-            <DarkModeToggler
-              themeMode={themeMode}
-              onClick={() => themeToggler()}
-            />
-          </ListItem>
-          <ListItem
+          {/* <ListItem
             className={clsx(classes.listItem, "menu-item--no-dropdown")}
           >
             <Button
@@ -311,6 +318,14 @@ const Topbar = ({
             >
               Faaliyet Raporu
             </Button>
+          </ListItem> */}
+          <ListItem
+            className={clsx(classes.listItem, "menu-item--no-dropdown")}
+          >
+            <DarkModeToggler
+              themeMode={themeMode}
+              onClick={() => themeToggler()}
+            />
           </ListItem>
           <ListItem
             className={clsx(classes.listItem, "menu-item--no-dropdown")}

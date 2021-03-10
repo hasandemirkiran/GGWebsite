@@ -149,6 +149,37 @@ const Main = ({ children, themeToggler, themeMode }) => {
         },
       },
     },
+    investor: {
+      title: "Yatirimci Iliskileri",
+      id: "investor-pages",
+      children: {
+        investorChildren: {
+          groupTitle: "Yatirimci Iliskileri",
+          pages: [
+            {
+              title: "Faaliyet Raporlari",
+              href: "/career-listing",
+            },
+            {
+              title: "Denetim Raporlari",
+              href: "/career-listing-minimal",
+            },
+            {
+              title: "Esas Sozlesme",
+              href: "/career-opening",
+            },
+            {
+              title: "SPK Belgeleri",
+              href: "/career-opening",
+            },
+            {
+              title: "Kamuya Yapilan Aciklamalar",
+              href: "/career-opening",
+            },
+          ],
+        },
+      },
+    },
     contact: {
       title: "Iletisim",
       id: "contact-pages",
