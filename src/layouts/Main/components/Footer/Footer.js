@@ -104,6 +104,7 @@ const Footer = (props) => {
 
   const corporate = pages.corporate;
   const services = pages.services;
+  const investor = pages.investor;
   const contact = pages.contact;
 
   const MenuGroup = (props) => {
@@ -134,10 +135,12 @@ const Footer = (props) => {
 
   const CorporatePages = () => {
     const { corporateChildren } = corporate.children;
+    const { investorChildren } = investor.children;
     return (
       <div className={classes.menu}>
         <div>
           <MenuGroup item={corporateChildren} />
+          <MenuGroup item={investorChildren} />
         </div>
       </div>
     );
