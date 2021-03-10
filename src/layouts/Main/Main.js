@@ -29,7 +29,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
           pages: [
             {
               title: "Hakkimizda",
-              href: "/coworking",
+              href: "/about",
             },
             {
               title: "Vizyon ve Misyon",

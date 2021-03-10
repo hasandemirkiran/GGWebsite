@@ -1,6 +1,6 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Section, SectionAlternate } from 'components/organisms';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Section, SectionAlternate } from "components/organisms";
 import {
   Contact,
   Gallery,
@@ -9,21 +9,21 @@ import {
   Story,
   Team,
   WhoWeAre,
-} from './components';
+} from "./components";
 
-import { team, companies, mapData, gallery } from './data';
+import { team, companies, mapData, gallery } from "./data";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    height: '100%',
-    width: '100%',
+    height: "100%",
+    width: "100%",
   },
   sectionNoPaddingTop: {
     paddingTop: 0,
   },
   sectionPartners: {
-    boxShadow: '0 5px 20px 0 rgba(90, 202, 157, 0.05)',
-    '& .section-alternate__content': {
+    boxShadow: "0 5px 20px 0 rgba(90, 202, 157, 0.05)",
+    "& .section-alternate__content": {
       paddingTop: theme.spacing(5),
       paddingBottom: theme.spacing(5),
     },
@@ -39,7 +39,7 @@ const About = () => {
       <Section>
         <Story />
       </Section>
-      <Section className={classes.sectionNoPaddingTop}>
+      {/* <Section className={classes.sectionNoPaddingTop}>
         <WhoWeAre />
       </Section>
       <Section className={classes.sectionNoPaddingTop}>
@@ -47,7 +47,7 @@ const About = () => {
       </Section>
       <SectionAlternate className={classes.sectionPartners}>
         <Partners data={companies} />
-      </SectionAlternate>
+      </SectionAlternate> */}
       <Contact data={mapData} />
       <SectionAlternate>
         <Gallery data={gallery} />

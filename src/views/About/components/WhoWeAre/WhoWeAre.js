@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid } from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+import React from "react";
+import PropTypes from "prop-types";
+import { useTheme } from "@material-ui/core/styles";
+import { useMediaQuery, Grid } from "@material-ui/core";
+import { SectionHeader } from "components/molecules";
 
-const WhoWeAre = props => {
+const WhoWeAre = (props) => {
   const { className, ...rest } = props;
 
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
@@ -22,8 +22,8 @@ const WhoWeAre = props => {
             disableGutter
             align="left"
             subtitleProps={{
-              variant: 'body1',
-              color: 'textPrimary',
+              variant: "body1",
+              color: "textPrimary",
             }}
           />
         </Grid>
@@ -34,8 +34,8 @@ const WhoWeAre = props => {
             disableGutter
             align="left"
             subtitleProps={{
-              variant: 'body1',
-              color: 'textPrimary',
+              variant: "body1",
+              color: "textPrimary",
             }}
           />
         </Grid>

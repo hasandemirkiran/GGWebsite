@@ -1,27 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   List,
   ListItem,
   ListItemAvatar,
   ListItemText,
   Avatar,
-} from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
-import { HeroShaped, Map } from 'components/organisms';
+} from "@material-ui/core";
+import { SectionHeader } from "components/molecules";
+import { HeroShaped, Map } from "components/organisms";
 
 const useStyles = makeStyles(() => ({
   map: {
     zIndex: 9,
   },
   icon: {
-    background: 'transparent',
+    background: "transparent",
     borderRadius: 0,
   },
 }));
 
-const Contact = props => {
+const Contact = (props) => {
   const { data, className, ...rest } = props;
   const classes = useStyles();
 
@@ -31,11 +31,11 @@ const Contact = props => {
         leftSide={
           <div>
             <SectionHeader
-              title="Contact us"
-              subtitle="Keep track of what's happening with your data, change permissions, and run reports against your data anywhere in the world. Keep track of what's happening with your data, change permissions."
+              title="Iletisim"
+              subtitle="Akliniza takilan her turlu soru icin, 7/24 ulasilabilir bankacilik."
               subtitleProps={{
-                variant: 'body1',
-                color: 'textPrimary',
+                variant: "body1",
+                color: "textPrimary",
               }}
               data-aos="fade-up"
               align="left"
@@ -50,15 +50,15 @@ const Contact = props => {
                   />
                 </ListItemAvatar>
                 <ListItemText
-                  primary="Phone"
-                  secondary="+39 659-657-0133"
+                  primary="Telefon"
+                  secondary="0212 215 26 41"
                   primaryTypographyProps={{
-                    variant: 'subtitle1',
-                    color: 'textSecondary',
+                    variant: "subtitle1",
+                    color: "textSecondary",
                   }}
                   secondaryTypographyProps={{
-                    variant: 'subtitle1',
-                    color: 'textPrimary',
+                    variant: "subtitle1",
+                    color: "textPrimary",
                   }}
                 />
               </ListItem>
@@ -72,14 +72,14 @@ const Contact = props => {
                 </ListItemAvatar>
                 <ListItemText
                   primary="Email"
-                  secondary="hi@maccarianagency.com"
+                  secondary="info.ggbank@goldenglobalbank.com.tr"
                   primaryTypographyProps={{
-                    variant: 'subtitle1',
-                    color: 'textSecondary',
+                    variant: "subtitle1",
+                    color: "textSecondary",
                   }}
                   secondaryTypographyProps={{
-                    variant: 'subtitle1',
-                    color: 'textPrimary',
+                    variant: "subtitle1",
+                    color: "textPrimary",
                   }}
                 />
               </ListItem>
@@ -92,15 +92,15 @@ const Contact = props => {
                   />
                 </ListItemAvatar>
                 <ListItemText
-                  primary="Head Office"
-                  secondary="Via E. Golla 4"
+                  primary="Head Ofis"
+                  secondary="Esentepe Mh. Büyükdere Cd. No:127 B/17 Sisli/İSTANBUL - Türkiye"
                   primaryTypographyProps={{
-                    variant: 'subtitle1',
-                    color: 'textSecondary',
+                    variant: "subtitle1",
+                    color: "textSecondary",
                   }}
                   secondaryTypographyProps={{
-                    variant: 'subtitle1',
-                    color: 'textPrimary',
+                    variant: "subtitle1",
+                    color: "textPrimary",
                   }}
                 />
               </ListItem>
