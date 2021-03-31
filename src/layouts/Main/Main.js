@@ -37,7 +37,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Ortaklik Yapisi",
-              href: "/job-listing",
+              href: "/partnership",
             },
             {
               title: "Yonetim Kurulu",

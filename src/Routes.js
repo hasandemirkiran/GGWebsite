@@ -61,6 +61,7 @@ import {
   NotFound as NotFoundView,
   NotFoundCover as NotFoundCoverView,
   Vision as VisionView,
+  Partnership as PartnershipView,
 } from "./views";
 
 const Routes = () => {
@@ -271,6 +272,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={VisionView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/partnership"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={PartnershipView}
             layout={MainLayout}
           />
         )}
