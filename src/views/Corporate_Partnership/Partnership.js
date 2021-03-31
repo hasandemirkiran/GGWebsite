@@ -76,9 +76,6 @@ const Partnership = () => {
     <div className={classes.root}>
       <Section className={classes.pieChart}>
         <PieChart
-          // label={(labelRenderProps) => "deneme"}
-          paddingAngle={2}
-          segmentsShift={2}
           data={[
             { title: "Emir KAYA", value: 36, color: "#6dd3ce" },
             { title: "Salih BERBEROGLU", value: 32, color: "#c8e9a0" },
@@ -86,6 +83,11 @@ const Partnership = () => {
             { title: "Recep KABA", value: 14, color: "#a13d63" },
             { title: "Mustafa AKIN", value: 4, color: "#351e29" },
           ]}
+          label={({ dataEntry }) => Math.round(dataEntry.percentage) + "%"}
+          labelStyle={{
+            fontSize: "5px",
+            fontFamily: "sans-serif",
+          }}
         />
       </Section>
       <Section className={classes.sectionNoPaddingTop}>
