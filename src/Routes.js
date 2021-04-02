@@ -62,6 +62,7 @@ import {
   NotFoundCover as NotFoundCoverView,
   Vision as VisionView,
   Partnership as PartnershipView,
+  Board as BoardView,
 } from "./views";
 
 const Routes = () => {
@@ -272,6 +273,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={VisionView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/board"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={BoardView}
             layout={MainLayout}
           />
         )}

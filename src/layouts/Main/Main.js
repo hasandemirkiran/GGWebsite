@@ -41,7 +41,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Yonetim Kurulu",
-              href: "/e-learning",
+              href: "/board",
             },
             {
               title: "Degerlerimiz",

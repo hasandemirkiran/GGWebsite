@@ -47,3 +47,4 @@ export { default as NotFound } from "./NotFound";
 export { default as NotFoundCover } from "./NotFoundCover";
 export { default as Vision } from "./Corporate_Vision";
 export { default as Partnership } from "./Corporate_Partnership";
+export { default as Board } from "./Corporate_Board";
