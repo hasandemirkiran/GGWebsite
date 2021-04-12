@@ -1,14 +1,13 @@
 import React from "react";
+import { Divider } from "@material-ui/core";
 import { Section, SectionAlternate } from "components/organisms";
-import { Faq } from "./components";
+import { About, Features, Hero, Jobs, Newsletter } from "./components";
 
-import { faq } from "./data";
+import { features, jobs } from "./data";
 
 const Values = () => (
   <div>
-    <SectionAlternate>
-      <Faq data={faq} />
-    </SectionAlternate>
+    <Features data={features} />
   </div>
 );
 
