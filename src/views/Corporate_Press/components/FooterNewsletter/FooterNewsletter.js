@@ -1,42 +1,42 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   colors,
   Grid,
   FormControl,
   OutlinedInput,
   InputAdornment,
-} from '@material-ui/core';
-import { Icon, Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+} from "@material-ui/core";
+import { Icon, Image } from "components/atoms";
+import { SectionHeader } from "components/molecules";
 
 const useStyles = makeStyles(() => ({
   textWhite: {
-    color: 'white',
+    color: "white",
   },
   inputContainer: {
-    display: 'flex',
-    justifyContent: 'flex-start',
+    display: "flex",
+    justifyContent: "flex-start",
   },
   formControl: {
     maxWidth: 400,
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: 'white',
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "white",
       },
-      '&:hover fieldset': {
-        borderColor: 'white',
+      "&:hover fieldset": {
+        borderColor: "white",
       },
-      '&.Mui-focused fieldset': {
-        borderColor: 'white',
+      "&.Mui-focused fieldset": {
+        borderColor: "white",
       },
     },
-    '& .MuiInputBase-root': {
-      color: 'white',
+    "& .MuiInputBase-root": {
+      color: "white",
     },
-    '& .MuiInputAdornment-root i': {
-      color: 'white !important',
+    "& .MuiInputAdornment-root i": {
+      color: "white !important",
     },
   },
   image: {
@@ -44,7 +44,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const FooterNewsletter = props => {
+const FooterNewsletter = (props) => {
   const { data, className, ...rest } = props;
   const classes = useStyles();
 
@@ -62,13 +62,12 @@ const FooterNewsletter = props => {
             <SectionHeader
               title={
                 <span className={classes.textWhite}>
-                  Subscribe To Our Newsletter
+                  Haberlerimizi Takip Edin
                 </span>
               }
               subtitle={
                 <span className={classes.textWhite}>
-                  Don't lose a chance to be among the firsts to know about our
-                  upcoming news and updates.
+                  Bizden haberdar olun ve yeni yayinlarimizi takip edin
                 </span>
               }
               fadeUp
@@ -90,7 +89,7 @@ const FooterNewsletter = props => {
                       />
                     </InputAdornment>
                   }
-                  placeholder="Enter your email"
+                  placeholder="Emailinizi girin"
                 />
               </FormControl>
             </div>
