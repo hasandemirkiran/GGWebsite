@@ -45,7 +45,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Degerlerimiz",
-              href: "/e-commerce",
+              href: "/values",
             },
             {
               title: "Basinda Biz",
