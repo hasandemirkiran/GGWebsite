@@ -1,7 +1,7 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
-import { Section, SectionAlternate } from 'components/organisms';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
+import { Section, SectionAlternate } from "components/organisms";
 import {
   Content,
   FooterNewsletter,
@@ -9,18 +9,18 @@ import {
   SidebarArticles,
   SidebarNewsletter,
   SimilarStories,
-} from './components';
+} from "./components";
 
-import { content, sidebarArticles, similarStories } from './data';
+import { content, sidebarArticles, similarStories } from "./data";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    height: '100%',
-    width: '100%',
+    height: "100%",
+    width: "100%",
   },
   sidebarNewsletter: {
     marginTop: theme.spacing(4),
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       marginTop: theme.spacing(2),
     },
   },
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const BlogArticle = () => {
+const Press = () => {
   const classes = useStyles();
 
   return (
@@ -61,4 +61,4 @@ const BlogArticle = () => {
   );
 };
 
-export default BlogArticle;
+export default Press;

@@ -64,6 +64,7 @@ import {
   Partnership as PartnershipView,
   Board as BoardView,
   Values as ValuesView,
+  Press as PressView,
 } from "./views";
 
 const Routes = () => {
@@ -296,6 +297,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={ValuesView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/press"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={PressView}
             layout={MainLayout}
           />
         )}

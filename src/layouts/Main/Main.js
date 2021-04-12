@@ -49,7 +49,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Basinda Biz",
-              href: "/expo",
+              href: "/press",
             },
           ],
         },
