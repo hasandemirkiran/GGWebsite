@@ -64,11 +64,11 @@ const Main = ({ children, themeToggler, themeMode }) => {
           pages: [
             {
               title: "Kurumsal Finansman Destegi",
-              href: "/career-listing",
+              href: "/short-term-liquidity",
             },
             {
               title: "Kar-Zarar Ortakligi",
-              href: "/career-listing-minimal",
+              href: "/profit-loss-partnership",
             },
             {
               title: "Ortak Yatirimlar",

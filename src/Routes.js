@@ -65,6 +65,8 @@ import {
   Board as BoardView,
   Values as ValuesView,
   Press as PressView,
+  ShortTermLiquidityFinancing as ShortTermLiquidityFinancingView,
+  ProfitLossPartnership as ProfitLossPartnershipView,
 } from "./views";
 
 const Routes = () => {
@@ -319,6 +321,28 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={PartnershipView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/short-term-liquidity"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={ShortTermLiquidityFinancingView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/profit-loss-partnership"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={ProfitLossPartnershipView}
             layout={MainLayout}
           />
         )}
