@@ -70,6 +70,7 @@ import {
   ProfitLossPartnership as ProfitLossPartnershipView,
   EquityPartnership as EquityPartnershipView,
   DeferredExportFinancing as DeferredExportFinancingView,
+  LettersofGuarantee as LettersofGuaranteeView,
 } from "./views";
 
 const Routes = () => {
@@ -368,6 +369,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={DeferredExportFinancingView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/letters-of-guarantee"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={LettersofGuaranteeView}
             layout={MainLayout}
           />
         )}

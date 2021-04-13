@@ -80,7 +80,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Teminat Mektuplari",
-              href: "/career-opening",
+              href: "/letters-of-guarantee",
             },
             {
               title: "Kabul/Avans",
