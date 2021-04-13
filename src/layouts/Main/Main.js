@@ -72,7 +72,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Ortak Yatirimlar",
-              href: "/career-opening",
+              href: "/equity-partnership",
             },
             {
               title: "Vadeli Ihracat Finansmani",

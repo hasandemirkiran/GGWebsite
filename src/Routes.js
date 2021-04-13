@@ -67,6 +67,7 @@ import {
   Press as PressView,
   ShortTermLiquidityFinancing as ShortTermLiquidityFinancingView,
   ProfitLossPartnership as ProfitLossPartnershipView,
+  EquityPartnership as EquityPartnershipView,
 } from "./views";
 
 const Routes = () => {
@@ -343,6 +344,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={ProfitLossPartnershipView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/equity-partnership"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={EquityPartnershipView}
             layout={MainLayout}
           />
         )}

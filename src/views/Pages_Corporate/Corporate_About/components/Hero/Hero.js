@@ -7,7 +7,7 @@ import { SectionHeader } from "components/molecules";
 import { Section } from "components/organisms";
 
 //import svg background
-import svgBackground from "../../../../assets/images/Protruding-Squares.png";
+import svgBackground from "../../../../../assets/images/Protruding-Squares.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -56,8 +56,8 @@ const Hero = (props) => {
       />
       <Section className={classes.section}>
         <SectionHeader
-          title="Basında Biz"
-          subtitle="Golden Globan Yatirim Bankasi, Turk ve Dunya basininda"
+          title="Hakkimizda"
+          subtitle="Bankacılık ve uluslararası ticaret alanlarinda kurulmus, seffaflik esasli bir banka."
           align="left"
           data-aos="fade-up"
           disableGutter
