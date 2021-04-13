@@ -52,3 +52,4 @@ export { default as Press } from "./Pages_Corporate/Corporate_Press";
 export { default as ShortTermLiquidityFinancing } from "./Pages_Product_Services/Credits/ShortTermLiquidityFinancing";
 export { default as ProfitLossPartnership } from "./Pages_Product_Services/Credits/ProfitLossPartnership";
 export { default as EquityPartnership } from "./Pages_Product_Services/Credits/EquityPartnership";
+export { default as DeferredExportFinancing } from "./Pages_Product_Services/Credits/DeferredExportFinancing";

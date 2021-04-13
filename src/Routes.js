@@ -5,6 +5,7 @@
  */
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+import DeferredExportFinancing from "views/Pages_Product_Services/Credits/DeferredExportFinancing";
 import WithLayout from "WithLayout";
 import {
   Main as MainLayout,
@@ -68,6 +69,7 @@ import {
   ShortTermLiquidityFinancing as ShortTermLiquidityFinancingView,
   ProfitLossPartnership as ProfitLossPartnershipView,
   EquityPartnership as EquityPartnershipView,
+  DeferredExportFinancing as DeferredExportFinancingView,
 } from "./views";
 
 const Routes = () => {
@@ -355,6 +357,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={EquityPartnershipView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/deferred-export-financing"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={DeferredExportFinancingView}
             layout={MainLayout}
           />
         )}

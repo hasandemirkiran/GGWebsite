@@ -76,7 +76,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Vadeli Ihracat Finansmani",
-              href: "/career-opening",
+              href: "/deferred-export-financing",
             },
             {
               title: "Teminat Mektuplari",
