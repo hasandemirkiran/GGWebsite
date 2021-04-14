@@ -62,27 +62,7 @@ const Process = (props) => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={4}>
-        <Grid item xs={12} sm={12} md={6}>
-          <SectionHeader
-            label="Investment Fund"
-            title={
-              <span>
-                <Typography component="span" variant="inherit" color="primary">
-                  Investment funds (Participation Funds)
-                </Typography>{" "}
-                are composed of interest-free capital and money markets
-                instruments. An investment fund may include solely or jointly
-                lease certificates, participation accounts (interest-free time
-                deposit), precious metals, ownership interest or any other
-                interest-free capital and money markets instrument.
-              </span>
-            }
-            subtitle="You can securely make purchases, sales and transfers of Sukuk and Investment Fund (Participation Fund) through the Investment Account you will open at our bank."
-            align="left"
-            disableGutter
-          />
-        </Grid>
+      <Grid container spacing={4} style={{ marginTop: "2rem" }}>
         <Grid
           item
           container
@@ -108,6 +88,26 @@ const Process = (props) => {
               srcSet: image3,
               alt: "...",
             }}
+          />
+        </Grid>
+        <Grid item xs={12} sm={12} md={6}>
+          <SectionHeader
+            label="Investment Fund"
+            title={
+              <span>
+                <Typography component="span" variant="inherit" color="primary">
+                  Investment funds (Participation Funds)
+                </Typography>{" "}
+                are composed of interest-free capital and money markets
+                instruments. An investment fund may include solely or jointly
+                lease certificates, participation accounts (interest-free time
+                deposit), precious metals, ownership interest or any other
+                interest-free capital and money markets instrument.
+              </span>
+            }
+            subtitle="You can securely make purchases, sales and transfers of Sukuk and Investment Fund (Participation Fund) through the Investment Account you will open at our bank."
+            align="left"
+            disableGutter
           />
         </Grid>
       </Grid>
