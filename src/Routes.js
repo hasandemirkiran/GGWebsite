@@ -73,6 +73,8 @@ import {
   LettersofGuarantee as LettersofGuaranteeView,
   AcceptanceAvalFinancing as AcceptanceAvalFinancingView,
   LettersCredit as LettersCreditView,
+  Forward as ForwardView,
+  FXTransactions as FXTransactionsView,
 } from "./views";
 
 const Routes = () => {
@@ -404,6 +406,28 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={LettersCreditView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/forward"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={ForwardView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/fx-transactions"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={FXTransactionsView}
             layout={MainLayout}
           />
         )}

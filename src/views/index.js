@@ -56,3 +56,5 @@ export { default as DeferredExportFinancing } from "./Pages_Product_Services/Cre
 export { default as LettersofGuarantee } from "./Pages_Product_Services/Credits/LettersofGuarantee";
 export { default as AcceptanceAvalFinancing } from "./Pages_Product_Services/Credits/AcceptanceAvalFinancing";
 export { default as LettersCredit } from "./Pages_Product_Services/Credits/LettersCredit";
+export { default as Forward } from "./Pages_Product_Services/Treasury_Products/Forward";
+export { default as FXTransactions } from "./Pages_Product_Services/Treasury_Products/FXTransactions";

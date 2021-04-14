@@ -114,11 +114,11 @@ const Main = ({ children, themeToggler, themeMode }) => {
           pages: [
             {
               title: "Forward-Vadeli Islemler",
-              href: "/about",
+              href: "/forward",
             },
             {
               title: "Doviz Islemleri",
-              href: "/about-side-cover",
+              href: "/fx-transactions",
             },
             {
               title: "Kiymetli Maden Alim-Satim Islemleri",
