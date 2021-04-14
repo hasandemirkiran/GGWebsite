@@ -88,7 +88,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Akreditif",
-              href: "/career-opening",
+              href: "/letters-of-credit",
             },
           ],
         },
