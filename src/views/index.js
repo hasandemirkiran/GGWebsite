@@ -54,3 +54,4 @@ export { default as ProfitLossPartnership } from "./Pages_Product_Services/Credi
 export { default as EquityPartnership } from "./Pages_Product_Services/Credits/EquityPartnership";
 export { default as DeferredExportFinancing } from "./Pages_Product_Services/Credits/DeferredExportFinancing";
 export { default as LettersofGuarantee } from "./Pages_Product_Services/Credits/LettersofGuarantee";
+export { default as AcceptanceAvalFinancing } from "./Pages_Product_Services/Credits/AcceptanceAvalFinancing";

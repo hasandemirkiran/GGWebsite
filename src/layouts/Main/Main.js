@@ -84,7 +84,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Kabul/Avans",
-              href: "/career-opening",
+              href: "/acceptance-aval-guarantee",
             },
             {
               title: "Akreditif",
