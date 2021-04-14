@@ -60,3 +60,7 @@ export { default as Forward } from "./Pages_Product_Services/Treasury_Products/F
 export { default as FXTransactions } from "./Pages_Product_Services/Treasury_Products/FXTransactions";
 export { default as PreciousMetals } from "./Pages_Product_Services/Treasury_Products/PreciousMetals";
 export { default as Securities } from "./Pages_Product_Services/Treasury_Products/Securities";
+export { default as ForeignTrade } from "./Pages_Product_Services/Foreign_Trade/ForeignTrade";
+export { default as FXandTRYPayments } from "./Pages_Product_Services/Foreign_Trade/FXandTRYPayments";
+export { default as LettersOfGuarantee } from "./Pages_Product_Services/Foreign_Trade/LettersOfGuarantee";
+export { default as TypesOfPayment } from "./Pages_Product_Services/Foreign_Trade/TypesOfPayment";

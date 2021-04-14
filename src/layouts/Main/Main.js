@@ -97,19 +97,19 @@ const Main = ({ children, themeToggler, themeMode }) => {
           pages: [
             {
               title: "Dis Ticaret",
-              href: "/help-center",
+              href: "/foreign-trade",
             },
             {
               title: "Dis Ticaret Odeme Sekli",
-              href: "/help-center",
+              href: "/types-of-payment",
             },
             {
               title: "Harici Garanti",
-              href: "/help-center-article",
+              href: "/letters-of-guarantee",
             },
             {
               title: "YP ve TL Transferleri",
-              href: "/help-center-article",
+              href: "/FX-TRY-payments",
             },
           ],
         },

@@ -6,6 +6,7 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import DeferredExportFinancing from "views/Pages_Product_Services/Credits/DeferredExportFinancing";
+import TypesOfPayment from "views/Pages_Product_Services/Foreign_Trade/TypesOfPayment";
 import WithLayout from "WithLayout";
 import {
   Main as MainLayout,
@@ -77,6 +78,10 @@ import {
   FXTransactions as FXTransactionsView,
   PreciousMetals as PreciousMetalsView,
   Securities as SecuritiesView,
+  ForeignTrade as ForeignTradeView,
+  FXandTRYPayments as FXandTRYPaymentsView,
+  LettersOfGuarantee as LettersOfGuaranteeView,
+  TypesOfPayment as TypesOfPaymentView,
 } from "./views";
 
 const Routes = () => {
@@ -452,6 +457,50 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={SecuritiesView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/foreign-trade"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={ForeignTradeView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/FX-TRY-payments"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={FXandTRYPaymentsView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/letters-of-guarantee"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={LettersOfGuaranteeView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/types-of-payment"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={TypesOfPaymentView}
             layout={MainLayout}
           />
         )}
