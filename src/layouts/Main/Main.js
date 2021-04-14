@@ -122,11 +122,11 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Kiymetli Maden Alim-Satim Islemleri",
-              href: "/pricing",
+              href: "/precious-metals",
             },
             {
               title: "Menkul Kiymet Islemleri",
-              href: "/company-terms",
+              href: "/securities",
             },
           ],
         },

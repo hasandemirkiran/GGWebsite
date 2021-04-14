@@ -58,3 +58,5 @@ export { default as AcceptanceAvalFinancing } from "./Pages_Product_Services/Cre
 export { default as LettersCredit } from "./Pages_Product_Services/Credits/LettersCredit";
 export { default as Forward } from "./Pages_Product_Services/Treasury_Products/Forward";
 export { default as FXTransactions } from "./Pages_Product_Services/Treasury_Products/FXTransactions";
+export { default as PreciousMetals } from "./Pages_Product_Services/Treasury_Products/PreciousMetals";
+export { default as Securities } from "./Pages_Product_Services/Treasury_Products/Securities";

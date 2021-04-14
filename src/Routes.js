@@ -75,6 +75,8 @@ import {
   LettersCredit as LettersCreditView,
   Forward as ForwardView,
   FXTransactions as FXTransactionsView,
+  PreciousMetals as PreciousMetalsView,
+  Securities as SecuritiesView,
 } from "./views";
 
 const Routes = () => {
@@ -428,6 +430,28 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={FXTransactionsView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/precious-metals"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={PreciousMetalsView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/securities"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={SecuritiesView}
             layout={MainLayout}
           />
         )}
