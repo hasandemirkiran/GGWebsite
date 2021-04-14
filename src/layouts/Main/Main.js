@@ -96,6 +96,10 @@ const Main = ({ children, themeToggler, themeMode }) => {
           groupTitle: "Dis Ticaret",
           pages: [
             {
+              title: "Dis Ticaret",
+              href: "/help-center",
+            },
+            {
               title: "Dis Ticaret Odeme Sekli",
               href: "/help-center",
             },
