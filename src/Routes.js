@@ -82,6 +82,7 @@ import {
   FXandTRYPayments as FXandTRYPaymentsView,
   LettersOfGuarantee as LettersOfGuaranteeView,
   TypesOfPayment as TypesOfPaymentView,
+  ProductandServicesPrice as ProductandServicesPriceView,
 } from "./views";
 
 const Routes = () => {
@@ -501,6 +502,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={TypesOfPaymentView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/product-and-services-prices"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={ProductandServicesPriceView}
             layout={MainLayout}
           />
         )}

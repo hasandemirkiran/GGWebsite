@@ -139,7 +139,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
           pages: [
             {
               title: "Urun ve Hizmet Ucretleme",
-              href: "/contact-page",
+              href: "/product-and-services-prices",
             },
             {
               title: "Sozlesme ve Bilgilendirme Formlari",

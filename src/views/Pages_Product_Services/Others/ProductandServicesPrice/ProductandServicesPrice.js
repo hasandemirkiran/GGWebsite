@@ -1,10 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Divider } from "@material-ui/core";
-
 import { Section, SectionAlternate } from "components/organisms";
-
 import { Process } from "./components";
+
+//show pdf
+import samplePDF from "../../../../assets/PDFs/urunvemusterihiz.pdf";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,9 +22,7 @@ const ProductandServicesPrice = () => {
 
   return (
     <div className={classes.root}>
-      <Section>
-        <Process />
-      </Section>
+      <Section></Section>
     </div>
   );
 };
