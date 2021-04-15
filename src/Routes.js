@@ -84,6 +84,8 @@ import {
   TypesOfPayment as TypesOfPaymentView,
   ProductandServicesPrice as ProductandServicesPriceView,
   ContractForms as ContractFormsView,
+  CustomerSatisfaction as CustomerSatisfactionView,
+  KVKK as KVKKView,
 } from "./views";
 
 const Routes = () => {
@@ -525,6 +527,29 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={ContractFormsView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/customer-satisfaction"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={CustomerSatisfactionView}
+            layout={MainLayout}
+          />
+        )}
+      />
+
+      <Route
+        exact
+        path="/kvkk"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={KVKKView}
             layout={MainLayout}
           />
         )}

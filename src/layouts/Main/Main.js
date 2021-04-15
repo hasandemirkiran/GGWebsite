@@ -147,7 +147,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Musteri Memnuniyet Merkezi",
-              href: "/contact-page-cover",
+              href: "/customer-satisfaction",
             },
           ],
         },

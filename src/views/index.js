@@ -66,3 +66,5 @@ export { default as LettersOfGuarantee } from "./Pages_Product_Services/Foreign_
 export { default as TypesOfPayment } from "./Pages_Product_Services/Foreign_Trade/TypesOfPayment";
 export { default as ProductandServicesPrice } from "./Pages_Product_Services/Others/ProductandServicesPrice";
 export { default as ContractForms } from "./Pages_Product_Services/Others/ContractForms";
+export { default as CustomerSatisfaction } from "./Pages_Product_Services/Others/CustomerSatisfaction";
+export { default as KVKK } from "./Pages_Product_Services/Others/KVKK";
