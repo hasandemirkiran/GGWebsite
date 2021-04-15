@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Section, SectionAlternate } from "components/organisms";
 import { Process } from "./components";
-
+import { Box, Button } from "@material-ui/core";
 //show pdf
 import samplePDF from "../../../../assets/PDFs/urunvemusterihiz.pdf";
-import { Document, Page, pdfjs } from "react-pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,25 +20,21 @@ const useStyles = makeStyles((theme) => ({
 const ProductandServicesPrice = () => {
   const classes = useStyles();
 
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
-
   return (
     <div className={classes.root}>
       <Section>
-        <Document
-          file="./urunvemusterihiz.pdf"
-          onLoadSuccess={onDocumentLoadSuccess}
-        >
-          <Page pageNumber={pageNumber} />
-        </Document>
-        <p>
-          Page {pageNumber} of {numPages}
-        </p>
+        <Box display="flex" justifyContent="center" mt={2}>
+          <Button
+            color="primary"
+            component="a"
+            href={samplePDF}
+            variant="contained"
+            target="blank"
+            fullWidth
+          >
+            Urun ve Hizmet Ucretlendirmelerimiz
+          </Button>
+        </Box>
       </Section>
     </div>
   );

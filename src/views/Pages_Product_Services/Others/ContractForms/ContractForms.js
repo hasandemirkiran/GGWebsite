@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Divider } from "@material-ui/core";
-
 import { Section, SectionAlternate } from "components/organisms";
-
 import { Process } from "./components";
+import { Box, Button } from "@material-ui/core";
+//show pdf
+import samplePDF from "../../../../assets/PDFs/urunvemusterihiz.pdf";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,7 +23,18 @@ const ContractForms = () => {
   return (
     <div className={classes.root}>
       <Section>
-        <Process />
+        <Box display="flex" justifyContent="center" mt={2}>
+          <Button
+            color="primary"
+            component="a"
+            href="https://goldenglobalbank.com.tr/icerik/uploads/2020/06/bankacilik_-sozlesmesi-oncesi_bilgilendirme_formu.pdf"
+            variant="contained"
+            target="blank"
+            fullWidth
+          >
+            Bankacilik Hizmetleri Sozlesme Oncesi Bilgilendirme Formu
+          </Button>
+        </Box>
       </Section>
     </div>
   );

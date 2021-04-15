@@ -65,3 +65,4 @@ export { default as FXandTRYPayments } from "./Pages_Product_Services/Foreign_Tr
 export { default as LettersOfGuarantee } from "./Pages_Product_Services/Foreign_Trade/LettersOfGuarantee";
 export { default as TypesOfPayment } from "./Pages_Product_Services/Foreign_Trade/TypesOfPayment";
 export { default as ProductandServicesPrice } from "./Pages_Product_Services/Others/ProductandServicesPrice";
+export { default as ContractForms } from "./Pages_Product_Services/Others/ContractForms";

@@ -83,6 +83,7 @@ import {
   LettersOfGuarantee as LettersOfGuaranteeView,
   TypesOfPayment as TypesOfPaymentView,
   ProductandServicesPrice as ProductandServicesPriceView,
+  ContractForms as ContractFormsView,
 } from "./views";
 
 const Routes = () => {
@@ -513,6 +514,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={ProductandServicesPriceView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/contract-forms"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={ContractFormsView}
             layout={MainLayout}
           />
         )}

@@ -143,7 +143,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Sozlesme ve Bilgilendirme Formlari",
-              href: "/contact-sidebar-map",
+              href: "/contract-forms",
             },
             {
               title: "Musteri Memnuniyet Merkezi",
