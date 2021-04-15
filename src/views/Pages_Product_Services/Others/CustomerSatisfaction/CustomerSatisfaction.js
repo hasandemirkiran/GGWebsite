@@ -183,7 +183,8 @@ const CustomerSatisfaction = () => {
                 <Grid item container justify="center" xs={12}>
                   <div>
                     <Typography variant="caption" gutterBottom>
-                      Kişisel Verilerle İlgili <a href="#">Aydınlatma Metni</a>
+                      Kişisel Verilerle İlgili{" "}
+                      <a href="kvkk">Aydınlatma Metni</a>
                       ’ni okudum, başvuru kapsamında kişisel verilerimin
                       işlenmesine, onayım vardır.
                     </Typography>
