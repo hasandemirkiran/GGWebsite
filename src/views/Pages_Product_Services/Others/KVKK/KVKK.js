@@ -4,7 +4,7 @@ import { Divider } from "@material-ui/core";
 import { Section, SectionAlternate } from "components/organisms";
 import { Application, Main, Newsletter } from "./components";
 
-import { jobRequirements } from "./data";
+import { toplanmaYontemi, veriTipi } from "./data";
 
 const useStyles = makeStyles((theme) => ({
   pagePaddingTop: {
@@ -21,15 +21,8 @@ const KVKK = () => {
   return (
     <div>
       <Section className={classes.pagePaddingTop}>
-        <Main data={jobRequirements} />
+        <Main data={toplanmaYontemi} data2={veriTipi} />
       </Section>
-      <SectionAlternate innerNarrowed>
-        <Application />
-      </SectionAlternate>
-      <Section>
-        <Newsletter />
-      </Section>
-      <Divider />
     </div>
   );
 };
