@@ -68,3 +68,4 @@ export { default as ProductandServicesPrice } from "./Pages_Product_Services/Oth
 export { default as ContractForms } from "./Pages_Product_Services/Others/ContractForms";
 export { default as CustomerSatisfaction } from "./Pages_Product_Services/Others/CustomerSatisfaction";
 export { default as KVKK } from "./Pages_Product_Services/Others/KVKK";
+export { default as AnnualReports } from "./Pages_Investor_Relations/AnnualReports";

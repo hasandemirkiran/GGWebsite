@@ -1,31 +1,31 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
-import React from 'react';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   Typography,
   Grid,
   Accordion as MuiAccordion,
   AccordionSummary as MuiAccordionSummary,
   AccordionDetails as MuiAccordionDetails,
-} from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+} from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-import { LearnMoreLink } from 'components/atoms';
+import { LearnMoreLink } from "components/atoms";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column",
   },
   expandOpen: {
-    transform: 'rotate(180deg)',
+    transform: "rotate(180deg)",
     color: theme.palette.primary.dark,
   },
   listItem: {
-    cursor: 'pointer',
+    cursor: "pointer",
   },
 }));
 
@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
  *
  * @param {*} props
  */
-const Accordion = props => {
+const Accordion = (props) => {
   const {
     items,
     className,
@@ -48,10 +48,10 @@ const Accordion = props => {
   const classes = useStyles();
 
   return (
-    <div {...rest} className={clsx('accordion', classes.root, className)}>
-      {items.map(item => (
+    <div {...rest} className={clsx("accordion", classes.root, className)}>
+      {items.map((item) => (
         <MuiAccordion
-          className={clsx('accordion__item-wrapper', classes.listItem)}
+          className={clsx("accordion__item-wrapper", classes.listItem)}
           key={item.id}
         >
           <MuiAccordionSummary
@@ -108,7 +108,7 @@ const Accordion = props => {
                   {item.text}
                 </Typography>
               </Grid>
-              {item.link && (
+              {/* {item.link && (
                 <Grid
                   item
                   xs={12}
@@ -116,12 +116,28 @@ const Accordion = props => {
                 >
                   <LearnMoreLink
                     title={item.link}
+                    href={item.href}
+                    variant="body1"
+                    className="accordion__collapsable-link"
+                    {...linkProps} />
+                </Grid>
+              )} */}
+
+              {item.links.map((item_link) => (
+                <Grid
+                  item
+                  xs={12}
+                  className="accordion__collapsable-link-wrapper"
+                >
+                  <LearnMoreLink
+                    title={item_link.link}
+                    href={item_link.href}
                     variant="body1"
                     className="accordion__collapsable-link"
                     {...linkProps}
                   />
                 </Grid>
-              )}
+              ))}
             </Grid>
           </MuiAccordionDetails>
         </MuiAccordion>

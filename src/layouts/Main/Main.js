@@ -162,7 +162,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
           pages: [
             {
               title: "Faaliyet Raporlari",
-              href: "/career-listing",
+              href: "/annual-reports",
             },
             {
               title: "Denetim Raporlari",

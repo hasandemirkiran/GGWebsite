@@ -1,24 +1,24 @@
-import React from 'react';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import { Typography, IconButton } from '@material-ui/core';
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+import React from "react";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography, IconButton } from "@material-ui/core";
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    textDecoration: 'none',
+    display: "inline-flex",
+    alignItems: "center",
+    textDecoration: "none",
   },
   title: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   icon: {
     padding: 0,
     marginLeft: theme.spacing(1),
-    '&:hover': {
-      background: 'transparent',
+    "&:hover": {
+      background: "transparent",
     },
   },
 }));
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
  *
  * @param {Object} props
  */
-const LearnMoreLink = props => {
+const LearnMoreLink = (props) => {
   const {
     color,
     component,
@@ -47,16 +47,16 @@ const LearnMoreLink = props => {
     <>
       <Typography
         component="span"
-        className={clsx('learn-more-link__typography', classes.title)}
+        className={clsx("learn-more-link__typography", classes.title)}
         variant={variant}
-        color={color || 'primary'}
+        color={color || "primary"}
         {...typographyProps}
       >
         {title}
       </Typography>
       <IconButton
-        className={clsx('learn-more-link__icon-button', classes.icon)}
-        color={color || 'primary'}
+        className={clsx("learn-more-link__icon-button", classes.icon)}
+        color={color || "primary"}
         {...iconProps}
       >
         <ArrowRightAltIcon className="learn-more-link__arrow" />
@@ -67,7 +67,8 @@ const LearnMoreLink = props => {
   return (
     <a
       href={href}
-      className={clsx('learn-more-link', classes.root, className)}
+      target="_blank"
+      className={clsx("learn-more-link", classes.root, className)}
       {...rest}
     >
       {children}
@@ -76,11 +77,11 @@ const LearnMoreLink = props => {
 };
 
 LearnMoreLink.defaultProps = {
-  variant: 'subtitle1',
-  href: '#',
+  variant: "subtitle1",
+  href: "#",
   typographyProps: {},
   iconProps: {},
-  component: 'a',
+  component: "a",
 };
 
 LearnMoreLink.propTypes = {
@@ -91,7 +92,7 @@ LearnMoreLink.propTypes = {
   /**
    * The component to load as a main DOM
    */
-  component: PropTypes.oneOf(['Link', 'a']),
+  component: PropTypes.oneOf(["Link", "a"]),
   /**
    * Title of the link
    */
@@ -99,7 +100,7 @@ LearnMoreLink.propTypes = {
   /**
    * Variant of the link
    */
-  variant: PropTypes.oneOf(['h6', 'subtitle1', 'subtitle2', 'body1', 'body2']),
+  variant: PropTypes.oneOf(["h6", "subtitle1", "subtitle2", "body1", "body2"]),
   /**
    * Href of the link
    */
