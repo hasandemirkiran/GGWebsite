@@ -70,3 +70,4 @@ export { default as CustomerSatisfaction } from "./Pages_Product_Services/Others
 export { default as KVKK } from "./Pages_Product_Services/Others/KVKK";
 export { default as AnnualReports } from "./Pages_Investor_Relations/AnnualReports";
 export { default as FinancialReports } from "./Pages_Investor_Relations/FinancialReports";
+export { default as ArticlesOfAssociation } from "./Pages_Investor_Relations/ArticlesOfAssociation";

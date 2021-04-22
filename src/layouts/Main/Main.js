@@ -170,7 +170,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Esas Sozlesme",
-              href: "/career-opening",
+              href: "/articles-of-association",
             },
             {
               title: "SPK Belgeleri",

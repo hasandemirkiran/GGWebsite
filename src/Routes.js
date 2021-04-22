@@ -88,6 +88,7 @@ import {
   KVKK as KVKKView,
   AnnualReports as AnnualReportsView,
   FinancialReports as FinancialReportsView,
+  ArticlesOfAssociation as ArticlesOfAssociationView,
 } from "./views";
 
 const Routes = () => {
@@ -573,6 +574,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={FinancialReportsView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/articles-of-association"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={ArticlesOfAssociationView}
             layout={MainLayout}
           />
         )}
