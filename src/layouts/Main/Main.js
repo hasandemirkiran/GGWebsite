@@ -166,7 +166,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Denetim Raporlari",
-              href: "/career-listing-minimal",
+              href: "/financial-reports",
             },
             {
               title: "Esas Sozlesme",

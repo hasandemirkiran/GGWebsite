@@ -87,6 +87,7 @@ import {
   CustomerSatisfaction as CustomerSatisfactionView,
   KVKK as KVKKView,
   AnnualReports as AnnualReportsView,
+  FinancialReports as FinancialReportsView,
 } from "./views";
 
 const Routes = () => {
@@ -543,7 +544,6 @@ const Routes = () => {
           />
         )}
       />
-
       <Route
         exact
         path="/kvkk"
@@ -555,7 +555,6 @@ const Routes = () => {
           />
         )}
       />
-
       <Route
         exact
         path="/annual-reports"
@@ -563,6 +562,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={AnnualReportsView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/financial-reports"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={FinancialReportsView}
             layout={MainLayout}
           />
         )}
