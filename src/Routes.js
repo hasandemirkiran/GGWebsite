@@ -89,6 +89,7 @@ import {
   AnnualReports as AnnualReportsView,
   FinancialReports as FinancialReportsView,
   ArticlesOfAssociation as ArticlesOfAssociationView,
+  PublicDisclosures as PublicDisclosuresView,
 } from "./views";
 
 const Routes = () => {
@@ -585,6 +586,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={ArticlesOfAssociationView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/public-disclosures"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={PublicDisclosuresView}
             layout={MainLayout}
           />
         )}

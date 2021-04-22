@@ -174,7 +174,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "SPK Belgeleri",
-              href: "/career-opening",
+              href: "/public-disclosures",
             },
             {
               title: "Kamuya Yapilan Aciklamalar",
