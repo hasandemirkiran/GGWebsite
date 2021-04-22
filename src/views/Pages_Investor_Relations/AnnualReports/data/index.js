@@ -14,36 +14,20 @@ export const breadcrumb = [
 ];
 
 export const questions = {
-  title: "Denetim Raporları",
-  subtitle: "Son yıllara ait denetim raporları.",
+  title: "Faaliyet Raporları",
+  subtitle: "Son yıllara ait faaliyet raporları.",
   items: [
     {
       id: "faq-1",
-      title: "2020 Denetim Raporları",
-      subtitle: "2020 denetim raporları detayları.",
+      title: "2020 Faaliyet Raporları",
+      subtitle: "2020 faaliyet raporları detayları.",
       links: [
         {
-          link: "Bağımsız Denetim Raporu (BDDK Solo Aralık 2020)",
+          link: "2020 Faaliyet Raporu",
           href:
-            "https://goldenglobalbank.com.tr/icerik/uploads/2021/03/BDDK-Solo-Rapor-Aral%C4%B1k-2020.pdf",
-        },
-        {
-          link: "Bağımsız Denetim Raporu (30 Eylül 2020)",
-          href:
-            "https://goldenglobalbank.com.tr/icerik/uploads/2020/11/BDDKSoloRaporEylul2020.pdf",
-        },
-        {
-          link: "Bağımsız Denetim Raporu (30 Haziran 2020)",
-          href:
-            "https://goldenglobalbank.com.tr/icerik/uploads/2020/08/BDDK_solo_rapor_haziran_2020.pdf",
+            "https://goldenglobalbank.com.tr/icerik/uploads/2021/04/2020-FAAL%C4%B0YET-RAPORU-GGB.pdf",
         },
       ],
-    },
-    {
-      id: "faq-2",
-      title: "2019 Denetim Raporları",
-      subtitle: "2019 denetim raporları detayları.",
-      links: [],
     },
   ],
 };
