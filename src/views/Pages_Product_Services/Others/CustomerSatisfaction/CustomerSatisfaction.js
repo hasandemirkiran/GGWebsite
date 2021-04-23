@@ -193,7 +193,7 @@ const CustomerSatisfaction = () => {
                         control={
                           <Checkbox defaultChecked={false} color="primary" />
                         }
-                        label="Onaylıyorum"
+                        label="Okudum Onaylıyorum"
                       />
                     </div>
                   </div>
