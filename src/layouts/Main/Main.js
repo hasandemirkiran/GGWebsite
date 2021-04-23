@@ -194,7 +194,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
           pages: [
             {
               title: "Duyurular",
-              href: "/account/?pid=general",
+              href: "/announcements",
             },
             {
               title: "Insan Kaynaklari",

@@ -62,6 +62,7 @@ import {
   ArticlesOfAssociation as ArticlesOfAssociationView,
   PublicDisclosures as PublicDisclosuresView,
   HumanResources as HumanResourcesView,
+  Announcements as AnnouncementsView,
 } from "./views";
 
 const Routes = () => {
@@ -580,6 +581,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={HumanResourcesView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/announcements"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={AnnouncementsView}
             layout={MainLayout}
           />
         )}
