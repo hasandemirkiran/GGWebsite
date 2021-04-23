@@ -72,3 +72,4 @@ export { default as AnnualReports } from "./Pages_Investor_Relations/AnnualRepor
 export { default as FinancialReports } from "./Pages_Investor_Relations/FinancialReports";
 export { default as ArticlesOfAssociation } from "./Pages_Investor_Relations/ArticlesOfAssociation";
 export { default as PublicDisclosures } from "./Pages_Investor_Relations/PublicDisclosures";
+export { default as HumanResources } from "./Pages_Contact_Us/HumanResources";

@@ -178,7 +178,8 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Kamuya Yapilan Aciklamalar",
-              href: "/career-opening",
+              href:
+                "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/AA1836BDEC5602E4E0530A4A622B2939",
             },
           ],
         },
@@ -192,6 +193,14 @@ const Main = ({ children, themeToggler, themeMode }) => {
           groupTitle: "Iletisim",
           pages: [
             {
+              title: "Duyurular",
+              href: "/account/?pid=general",
+            },
+            {
+              title: "Insan Kaynaklari",
+              href: "/human-resources",
+            },
+            {
               title: "Yasal uyari",
               href: "/account/?pid=general",
             },
@@ -202,14 +211,6 @@ const Main = ({ children, themeToggler, themeMode }) => {
             {
               title: "Kisisel Verilerin Korunmasi",
               href: "/account/?pid=notifications",
-            },
-            {
-              title: "Site Haritasi",
-              href: "/account/?pid=billing",
-            },
-            {
-              title: "Insan Kaynaklari",
-              href: "/account/?pid=billing",
             },
             {
               title: "Bize Ulasin",
