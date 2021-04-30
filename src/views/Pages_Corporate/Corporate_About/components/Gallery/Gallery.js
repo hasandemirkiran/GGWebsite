@@ -24,8 +24,8 @@ const Gallery = (props) => {
   return (
     <div className={className} {...rest}>
       <SectionHeader
-        title="Galerimizi Inceleyin"
-        subtitle="Binlerce musteri tarafindan guvenilen, seffaf bankacilik. "
+        title="Galerimizi İnceleyin"
+        subtitle="Binlerce müşteri tarafindan güvenilen, şeffaf bankacılık. "
         data-aos="fade-up"
       />
       <GridList cellHeight={isMd ? 360 : 260} cols={4} spacing={isMd ? 24 : 8}>
