@@ -210,7 +210,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Kisisel Verilerin Korunmasi",
-              href: "/account/?pid=notifications",
+              href: "/kvkk",
             },
             {
               title: "Bize Ulasin",

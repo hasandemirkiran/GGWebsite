@@ -15,6 +15,9 @@ import {
 } from "./layouts";
 
 import {
+  About as AboutView,
+  NotFound as NotFoundView,
+  NotFoundCover as NotFoundCoverView,
   Home as HomeView,
   IndexView,
   Agency as AgencyView,
@@ -89,6 +92,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={HomeView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/about"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={AboutView}
             layout={MainLayout}
           />
         )}
@@ -618,6 +632,28 @@ const Routes = () => {
             {...matchProps}
             component={PrivacyTermsUseView}
             layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/not-found"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={NotFoundView}
+            layout={MinimalLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/not-found-cover"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={NotFoundCoverView}
+            layout={MinimalLayout}
           />
         )}
       />
