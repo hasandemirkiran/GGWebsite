@@ -48,8 +48,8 @@ const Hero = (props) => {
       <div className="backgroundAbout">
         <Section className={(classes.section, classes.image)}>
           <SectionHeader
-            title="Hakkimizda"
-            subtitle="Bankacılık ve uluslararası ticaret alanlarinda kurulmus, seffaflik esasli bir banka."
+            title="Hakkımızda"
+            subtitle="Bankacılık ve uluslararası ticaret alanlarinda kurulmuş, şeffaflık esaslı bir banka."
             align="left"
             data-aos="fade-up"
             disableGutter

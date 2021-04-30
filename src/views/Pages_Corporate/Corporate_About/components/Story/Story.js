@@ -40,21 +40,6 @@ const Story = (props) => {
           <div>
             <SectionHeader
               title="Kurumsal"
-              subtitle="Bankacılık ve uluslararası ticaret alanındaki profesyonel yöneticilik ve girişimci kimlikleriyle üst düzey tecrübeye sahip ortaklar tarafından, ağırlıklı olarak dış ticaret firmalarına bankacılık hizmetleri ve alternatif finansman yöntemleri sunmak amacıyla kurulan Golden Global Bank; tüm faaliyetlerini faizsiz finans prensiplerine uygun şekilde icra eden ülkemizdeki ilk ve tek yatırım bankasıdır.
-
-              BDDK tarafından 29.05.2019 tarihinde kuruluş izni verilen Golden Global Bank; faizsiz finans prensipleri çerçevesinde, müşterilerinin ihtiyaçlarına pratik ve kalıcı çözümler sunarak Türkiye’de ve bölgesinde lider yatırım bankalarının arasına girme hedefiyle yola çıkmıştır.
-              
-              Golden Global Bank, ülkemizin gelecek vizyonuna duyduğu güven ve İstanbul’un ticari ve finansal kimliğiyle uyumlu şekilde üstleneceği Uluslararası Finans Merkezi rolüne olan inancıyla;
-              
-              Yakın coğrafyamız başta olmak üzere, hedef pazarlardaki dış ticaretin bankacılık hizmetlerine odaklanarak ülkemiz dış ticaret hacminin artırılmasına,
-              
-              Yurtiçi ve yurtdışında farklı kaynaklardan sağladığı fonlarla para ve sermaye piyasalarının derinleşmesine,
-              
-              Ülkemizdeki stratejik yatırım projelerinin finansmanına ve yakın coğrafyamızdaki potansiyel yatırımlardan ülkemiz müteşebbislerinin de faydalanabilmesine,
-              
-              Katkı sağlamayı hedeflemektedir.
-              
-              Bu doğrultuda, her biri kendi alanında uzmanlaşmış ve Golden Global Bank’ın iş modeline değer katan çalışanlarımızla, çözüm ortaklarımızla ve tüm paydaşlarımızla çalışmaya devam edeceğiz."
               align="left"
               disableGutter
               subtitleProps={{
@@ -62,6 +47,108 @@ const Story = (props) => {
                 variant: "body1",
               }}
             />
+
+            <ul
+              className="decimal_type"
+              style={{ listStyleType: "disc", marginLeft: "26px" }}
+            >
+              <li>
+                <span
+                  style={{ fontFamily: '"Arial",sans-serif', color: "#888888" }}
+                >
+                  Bankacılık ve uluslararası ticaret alanındaki profesyonel
+                  yöneticilik ve girişimci kimlikleriyle üst düzey tecrübeye
+                  sahip ortaklar tarafından, ağırlıklı olarak dış ticaret
+                  firmalarına bankacılık hizmetleri ve alternatif finansman
+                  yöntemleri sunmak amacıyla kurulan{" "}
+                  <strong>
+                    <span style={{ fontFamily: '"Arial",sans-serif' }}>
+                      Golden Global Bank
+                    </span>
+                  </strong>
+                  ; tüm faaliyetlerini faizsiz finans prensiplerine uygun
+                  şekilde icra eden ülkemizdeki ilk ve tek yatırım bankasıdır.
+                </span>
+              </li>
+              <li>
+                <span
+                  style={{ fontFamily: '"Arial",sans-serif', color: "#888888" }}
+                >
+                  BDDK tarafından 29.05.2019 tarihinde kuruluş izni verilen{" "}
+                  <strong>
+                    <span style={{ fontFamily: '"Arial",sans-serif' }}>
+                      Golden Global Bank
+                    </span>
+                  </strong>
+                  ; faizsiz finans prensipleri çerçevesinde, müşterilerinin
+                  ihtiyaçlarına pratik ve kalıcı çözümler sunarak Türkiye’de ve
+                  bölgesinde lider yatırım bankalarının arasına girme hedefiyle
+                  yola çıkmıştır.
+                </span>
+              </li>
+              <li>
+                <strong>
+                  <span
+                    style={{
+                      fontFamily: '"Arial",sans-serif',
+                      color: "#888888",
+                    }}
+                  >
+                    Golden Global Bank
+                  </span>
+                </strong>
+                <span
+                  style={{ fontFamily: '"Arial",sans-serif', color: "#888888" }}
+                >
+                  , ülkemizin gelecek vizyonuna duyduğu güven ve İstanbul’un
+                  ticari ve finansal kimliğiyle uyumlu şekilde üstleneceği
+                  Uluslararası Finans Merkezi rolüne olan inancıyla;
+                </span>
+              </li>
+              <li>
+                <span
+                  style={{ fontFamily: '"Arial",sans-serif', color: "#888888" }}
+                >
+                  Yakın coğrafyamız başta olmak üzere, hedef pazarlardaki dış
+                  ticaretin bankacılık hizmetlerine odaklanarak ülkemiz dış
+                  ticaret hacminin artırılmasına,
+                </span>
+              </li>
+              <li>
+                <span
+                  style={{ fontFamily: '"Arial",sans-serif', color: "#888888" }}
+                >
+                  Yurtiçi ve yurtdışında farklı kaynaklardan sağladığı fonlarla
+                  para ve sermaye piyasalarının derinleşmesine,
+                </span>
+              </li>
+              <li>
+                <span
+                  style={{ fontFamily: '"Arial",sans-serif', color: "#888888" }}
+                >
+                  Ülkemizdeki stratejik yatırım projelerinin finansmanına ve
+                  yakın coğrafyamızdaki potansiyel yatırımlardan ülkemiz
+                  müteşebbislerinin de faydalanabilmesine,
+                </span>
+              </li>
+              <li>
+                <span
+                  style={{ fontFamily: '"Arial",sans-serif', color: "#888888" }}
+                >
+                  Katkı sağlamayı hedeflemektedir.
+                </span>
+              </li>
+              <li>
+                <span
+                  style={{ fontFamily: '"Arial",sans-serif', color: "#888888" }}
+                >
+                  Bu doğrultuda, her biri kendi alanında uzmanlaşmış ve Golden
+                  Global Bank’ın iş modeline değer katan çalışanlarımızla, çözüm
+                  ortaklarımızla ve tüm paydaşlarımızla çalışmaya devam
+                  edeceğiz.
+                </span>
+              </li>
+            </ul>
           </div>
         </Grid>
         <Grid
