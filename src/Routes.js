@@ -68,7 +68,7 @@ import {
   Announcements as AnnouncementsView,
   LegalWarning as LegalWarningView,
   PrivacyTermsUse as PrivacyTermsUseView,
-  PrivacyTermsUse,
+  ContactUs as ContactUsView,
 } from "./views";
 
 const Routes = () => {
@@ -631,6 +631,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={PrivacyTermsUseView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/contact-us"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={ContactUsView}
             layout={MainLayout}
           />
         )}

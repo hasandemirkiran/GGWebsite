@@ -214,7 +214,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Bize Ulasin",
-              href: "/account/?pid=billing",
+              href: "/contact-us",
             },
           ],
         },
