@@ -8,6 +8,7 @@ import { Section } from "components/organisms";
 
 //import svg background
 import svgBackground from "../../../../../assets/images/Protruding-Squares.png";
+import "./Hero.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,32 +45,24 @@ const Hero = (props) => {
   const classes = useStyles();
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Image
-        src={svgBackground}
-        srcSet={svgBackground}
-        alt="About"
-        className={classes.image}
-        lazyProps={{
-          width: "100%",
-          height: "100%",
-        }}
-      />
-      <Section className={classes.section}>
-        <SectionHeader
-          title="Hakkimizda"
-          subtitle="Bankacılık ve uluslararası ticaret alanlarinda kurulmus, seffaflik esasli bir banka."
-          align="left"
-          data-aos="fade-up"
-          disableGutter
-          titleProps={{
-            className: clsx(classes.title, classes.textWhite),
-            variant: "h3",
-          }}
-          subtitleProps={{
-            className: classes.textWhite,
-          }}
-        />
-      </Section>
+      <div className="backgroundAbout">
+        <Section className={(classes.section, classes.image)}>
+          <SectionHeader
+            title="Hakkimizda"
+            subtitle="Bankacılık ve uluslararası ticaret alanlarinda kurulmus, seffaflik esasli bir banka."
+            align="left"
+            data-aos="fade-up"
+            disableGutter
+            titleProps={{
+              className: clsx(classes.title, classes.textWhite),
+              variant: "h3",
+            }}
+            subtitleProps={{
+              className: classes.textWhite,
+            }}
+          />
+        </Section>
+      </div>
     </div>
   );
 };
