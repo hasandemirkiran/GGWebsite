@@ -74,3 +74,5 @@ export { default as ArticlesOfAssociation } from "./Pages_Investor_Relations/Art
 export { default as PublicDisclosures } from "./Pages_Investor_Relations/PublicDisclosures";
 export { default as HumanResources } from "./Pages_Contact_Us/HumanResources";
 export { default as Announcements } from "./Pages_Contact_Us/Announcements";
+export { default as LegalWarning } from "./Pages_Contact_Us/LegalWarning";
+export { default as PrivacyTermsUse } from "./Pages_Contact_Us/PrivacyTermsUse";

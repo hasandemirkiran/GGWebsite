@@ -202,11 +202,11 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: "Yasal uyari",
-              href: "/account/?pid=general",
+              href: "/legal-warning",
             },
             {
               title: "Gizlilik ve Kullanim Kosullari",
-              href: "/account/?pid=security",
+              href: "/privacy-terms-use",
             },
             {
               title: "Kisisel Verilerin Korunmasi",

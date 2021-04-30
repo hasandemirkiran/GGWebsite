@@ -63,6 +63,9 @@ import {
   PublicDisclosures as PublicDisclosuresView,
   HumanResources as HumanResourcesView,
   Announcements as AnnouncementsView,
+  LegalWarning as LegalWarningView,
+  PrivacyTermsUse as PrivacyTermsUseView,
+  PrivacyTermsUse,
 } from "./views";
 
 const Routes = () => {
@@ -592,6 +595,28 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={AnnouncementsView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/legal-warning"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={LegalWarningView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/privacy-terms-use"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={PrivacyTermsUseView}
             layout={MainLayout}
           />
         )}
