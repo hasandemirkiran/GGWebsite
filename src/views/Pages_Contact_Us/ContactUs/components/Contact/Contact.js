@@ -18,6 +18,7 @@ import RoomIcon from "@material-ui/icons/Room";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 import LocalPrintshopIcon from "@material-ui/icons/LocalPrintshop";
 import HttpIcon from "@material-ui/icons/Http";
+import DetailsIcon from "@material-ui/icons/Details";
 
 const useStyles = makeStyles(() => ({
   map: {
@@ -123,7 +124,7 @@ const Contact = (props) => {
 
               <ListItem disableGutters data-aos="fade-up">
                 <ListItemAvatar>
-                  <AccountBalanceIcon />
+                  <DetailsIcon />
                 </ListItemAvatar>
                 <ListItemText
                   primary="Vergi Dairesi"
@@ -141,7 +142,7 @@ const Contact = (props) => {
 
               <ListItem disableGutters data-aos="fade-up">
                 <ListItemAvatar>
-                  <AccountBalanceIcon />
+                  <DetailsIcon />
                 </ListItemAvatar>
                 <ListItemText
                   primary="Sorumlu Kişiler"
@@ -159,7 +160,7 @@ const Contact = (props) => {
 
               <ListItem disableGutters data-aos="fade-up">
                 <ListItemAvatar>
-                  <AccountBalanceIcon />
+                  <DetailsIcon />
                 </ListItemAvatar>
                 <ListItemText
                   primary="Yer Sağlayıcı"
@@ -177,7 +178,7 @@ const Contact = (props) => {
 
               <ListItem disableGutters data-aos="fade-up">
                 <ListItemAvatar>
-                  <AccountBalanceIcon />
+                  <DetailsIcon />
                 </ListItemAvatar>
                 <ListItemText
                   primary="Yetkili Denetim Organı"
@@ -195,7 +196,7 @@ const Contact = (props) => {
 
               <ListItem disableGutters data-aos="fade-up">
                 <ListItemAvatar>
-                  <AccountBalanceIcon />
+                  <DetailsIcon />
                 </ListItemAvatar>
                 <ListItemText
                   primary="Mersis No"
