@@ -21,7 +21,7 @@ const GetStarted2 = ({ className, ...rest }) => {
       variant="contained"
       color="primary"
       component="a"
-      href="/home"
+      href="/vision-mission"
     >
       Daha Fazla
     </Button>
