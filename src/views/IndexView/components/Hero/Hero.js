@@ -11,6 +11,9 @@ import "./hero.css";
 import CollageLight from "../../../../assets/images/collage_light.png";
 import CollageDark from "../../../../assets/images/collage_dark.png";
 
+// import FXTable
+import FXTable from "../../../../components/organisms/FXTable/FXTable.js";
+
 const useStyles = makeStyles((theme) => ({
   fontWeight900: {
     fontWeight: 900,
@@ -143,19 +146,24 @@ const Hero = ({ themeMode = "light", className, ...rest }) => {
   );
 
   const leftSideContent = (
-    <SectionHeader
-      title={title}
-      subtitle={subtitle}
-      align="left"
-      titleProps={{
-        variant: "h2",
-        color: "textPrimary",
-      }}
-      ctaGroup={[docsButton, buyButton]}
-      data-aos="fade-right"
-      disableGutter
-      className={classes.leftSideContent}
-    />
+    <div>
+      <div style={{ maxWidth: "35rem", paddingBottom: "2rem", margin: "auto" }}>
+        <FXTable />
+      </div>
+      <SectionHeader
+        title={title}
+        subtitle={subtitle}
+        align="left"
+        titleProps={{
+          variant: "h2",
+          color: "textPrimary",
+        }}
+        ctaGroup={[docsButton, buyButton]}
+        data-aos="fade-right"
+        disableGutter
+        className={classes.leftSideContent}
+      />
+    </div>
   );
   return (
     <div className={className} {...rest}>

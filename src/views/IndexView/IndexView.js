@@ -28,11 +28,9 @@ const IndexView = ({ themeMode }) => {
     <div>
       <Hero themeMode={themeMode} />
       <Services />
-
       <SectionAlternate>
         <Features />
       </SectionAlternate>
-
       <Section className={classes.dividerSection}>
         <Divider />
       </Section>
