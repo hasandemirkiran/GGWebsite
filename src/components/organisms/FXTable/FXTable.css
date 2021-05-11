@@ -1,0 +1,15 @@
+.card-content {
+  padding: 10px;
+}
+
+.fx-slider {
+  max-width: 30rem;
+}
+
+.MuiCardContent-root:last-child {
+  padding-bottom: 10px !important;
+}
+
+.MuiPaper-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
