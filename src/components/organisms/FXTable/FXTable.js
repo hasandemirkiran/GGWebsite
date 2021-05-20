@@ -3,22 +3,24 @@ import Slider from "react-slick";
 import axios from "axios";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
-
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-
-// Import css files
-import "./FXTable.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { checkPropTypes } from "prop-types";
+import Grid from "@material-ui/core/Grid";
 
 const styles = (theme) => ({
+  container: {
+    padding: "0px!important",
+    borderLeft: "6px solid #ae182d",
+    // background: "#eee",
+  },
   root: {
-    paddingBottom: 0,
+    border: "5px",
+    paddingLeft: "8px",
+    paddingTop: "0px",
+    // background: "#eee",
   },
   title: {
     fontSize: 10,
@@ -43,6 +45,10 @@ const styles = (theme) => ({
     fontSize: 17,
     color: "#C0C0C0",
   },
+  numberXPT: {
+    fontSize: 17,
+    color: "#e5e4e2",
+  },
 });
 
 class FXTable extends Component {
@@ -57,6 +63,7 @@ class FXTable extends Component {
         TRY: "8.3040",
         XAU: "0.00054678",
         XAG: "0.03647507",
+        XPT: "0.00082816",
       },
     };
   }
@@ -93,138 +100,162 @@ class FXTable extends Component {
     const { classes } = this.props;
 
     return (
-      <div className="fx-slider">
-        <Slider {...settings}>
-          <div className="card-content">
-            <Card className={classes.root} variant="outlined">
-              <CardContent>
-                <Typography
-                  className={classes.title}
-                  color="textSecondary"
-                  gutterBottom
-                >
-                  <i
-                    class="fas fa-dollar-sign"
-                    style={{ marginRight: 5, color: "#C0C3A0" }}
-                  ></i>
-                  USD/TRY
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="h2"
-                  className={classes.numberUSD}
-                >
-                  {parseFloat(this.state.rates["TRY"]).toFixed(4)}
-                </Typography>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="card-content">
-            <Card className={classes.root} variant="outlined">
-              <CardContent>
-                <Typography
-                  className={classes.title}
-                  color="textSecondary"
-                  gutterBottom
-                >
-                  <i
-                    class="fas fa-euro-sign"
-                    style={{ marginRight: 5, color: "#C1CACD" }}
-                  ></i>
-                  EUR/TRY
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="h2"
-                  className={classes.numberEUR}
-                >
-                  {parseFloat(
-                    this.state.rates["TRY"] * (1 / this.state.rates["EUR"])
-                  ).toFixed(4)}
-                </Typography>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="card-content">
-            <Card className={classes.root} variant="outlined">
-              <CardContent>
-                <Typography
-                  className={classes.title}
-                  color="textSecondary"
-                  gutterBottom
-                >
-                  <i
-                    class="fas fa-pound-sign"
-                    style={{ marginRight: 5, color: "#D1C5DA" }}
-                  ></i>
-                  GBP/TRY
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="h2"
-                  className={classes.numberGBP}
-                >
-                  {parseFloat(
-                    this.state.rates["TRY"] * (1 / this.state.rates["GBP"])
-                  ).toFixed(4)}
-                </Typography>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="card-content">
-            <Card className={classes.root} variant="outlined">
-              <CardContent>
-                <Typography
-                  className={classes.title}
-                  color="textSecondary"
-                  gutterBottom
-                >
-                  <i
-                    class="fas fa-coins"
-                    style={{ marginRight: 5, color: "#B8860B" }}
-                  ></i>
-                  XAU/TRY
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="h2"
-                  className={classes.numberXAU}
-                >
-                  {parseFloat(
-                    this.state.rates["TRY"] * (1 / this.state.rates["XAU"])
-                  ).toFixed(4)}
-                </Typography>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="card-content">
-            <Card className={classes.root} variant="outlined">
-              <CardContent>
-                <Typography
-                  className={classes.title}
-                  color="textSecondary"
-                  gutterBottom
-                >
-                  <i
-                    class="fas fa-coins"
-                    style={{ marginRight: 5, color: "#C0C0C0" }}
-                  ></i>
-                  XAG/TRY
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="h2"
-                  className={classes.numberXAG}
-                >
-                  {parseFloat(
-                    this.state.rates["TRY"] * (1 / this.state.rates["XAG"])
-                  ).toFixed(4)}
-                </Typography>
-              </CardContent>
-            </Card>
-          </div>
-        </Slider>
-      </div>
+      <Grid container spacing={3} className={classes.container}>
+        <Grid item xs={4}>
+          <Card className={classes.root} variant="outlined">
+            <CardContent className={classes.root}>
+              <Typography
+                className={classes.title}
+                color="textSecondary"
+                gutterBottom
+              >
+                <i
+                  class="fas fa-dollar-sign"
+                  style={{ marginRight: 5, color: "#C0C3A0" }}
+                ></i>
+                USD/TRY
+              </Typography>
+              <Typography
+                variant="h6"
+                component="h2"
+                className={classes.numberUSD}
+              >
+                {parseFloat(this.state.rates["TRY"]).toFixed(4)}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={4}>
+          <Card className={classes.root} variant="outlined">
+            <CardContent className={classes.root}>
+              <Typography
+                className={classes.title}
+                color="textSecondary"
+                gutterBottom
+              >
+                <i
+                  class="fas fa-euro-sign"
+                  style={{ marginRight: 5, color: "#C1CACD" }}
+                ></i>
+                EUR/TRY
+              </Typography>
+              <Typography
+                variant="h6"
+                component="h2"
+                className={classes.numberEUR}
+              >
+                {parseFloat(
+                  this.state.rates["TRY"] * (1 / this.state.rates["EUR"])
+                ).toFixed(4)}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={4}>
+          <Card className={classes.root} variant="outlined">
+            <CardContent className={classes.root}>
+              <Typography
+                className={classes.title}
+                color="textSecondary"
+                gutterBottom
+              >
+                <i
+                  class="fas fa-pound-sign"
+                  style={{ marginRight: 5, color: "#D1C5DA" }}
+                ></i>
+                GBP/TRY
+              </Typography>
+              <Typography
+                variant="h6"
+                component="h2"
+                className={classes.numberGBP}
+              >
+                {parseFloat(
+                  this.state.rates["TRY"] * (1 / this.state.rates["GBP"])
+                ).toFixed(4)}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={4}>
+          <Card className={classes.root} variant="outlined">
+            <CardContent className={classes.root}>
+              <Typography
+                className={classes.title}
+                color="textSecondary"
+                gutterBottom
+              >
+                <i
+                  class="fas fa-coins"
+                  style={{ marginRight: 5, color: "#B8860B" }}
+                ></i>
+                XAU/TRY
+              </Typography>
+              <Typography
+                variant="h6"
+                component="h2"
+                className={classes.numberXAU}
+              >
+                {parseFloat(
+                  this.state.rates["TRY"] * (1 / this.state.rates["XAU"])
+                ).toFixed(4)}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={4}>
+          <Card className={classes.root} variant="outlined">
+            <CardContent className={classes.root}>
+              <Typography
+                className={classes.title}
+                color="textSecondary"
+                gutterBottom
+              >
+                <i
+                  class="fas fa-coins"
+                  style={{ marginRight: 5, color: "#C0C0C0" }}
+                ></i>
+                XAG/TRY
+              </Typography>
+              <Typography
+                variant="h6"
+                component="h2"
+                className={classes.numberXAG}
+              >
+                {parseFloat(
+                  this.state.rates["TRY"] * (1 / this.state.rates["XAG"])
+                ).toFixed(4)}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={4}>
+          <Card className={classes.root} variant="outlined">
+            <CardContent className={classes.root}>
+              <Typography
+                className={classes.title}
+                color="textSecondary"
+                gutterBottom
+              >
+                <i
+                  class="fas fa-coins"
+                  style={{ marginRight: 5, color: "#e5e4e2" }}
+                ></i>
+                XPT/TRY
+              </Typography>
+              <Typography
+                variant="h6"
+                component="h2"
+                className={classes.numberXPT}
+              >
+                {parseFloat(
+                  this.state.rates["TRY"] * (1 / this.state.rates["XPT"])
+                ).toFixed(4)}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
     );
   }
 }
