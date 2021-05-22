@@ -92,11 +92,11 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.dark,
   },
   logoContainer: {
-    width: 100,
-    height: 28,
+    width: 82,
+    height: 46,
     [theme.breakpoints.up("md")]: {
-      width: 120,
-      height: 50,
+      width: 82,
+      height: 46,
     },
   },
   logoImage: {
