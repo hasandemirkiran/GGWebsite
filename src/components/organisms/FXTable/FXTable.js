@@ -223,7 +223,7 @@ class FXTable extends Component {
         <div className="fxInfo">
           <Button color="primary" size="small">
             Daha Fazla
-            <i class="fas fa-expand-arrows-alt"></i>
+            <i class="fas fa-plus-circle" style={{ marginLeft: "0.5rem" }}></i>
           </Button>
         </div>
 
