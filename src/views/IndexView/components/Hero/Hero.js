@@ -150,6 +150,18 @@ const Hero = ({ themeMode = "light", className, ...rest }) => {
       <div style={{ maxWidth: "35rem", paddingBottom: "2rem", margin: "auto" }}>
         <FXTable />
       </div>
+      {/* <div className="fxInfo">
+        <Button
+          size="small"
+          variant="contained"
+          color="primary"
+          component="a"
+          href="/vision-mission"
+        >
+          Daha Fazla
+        </Button>
+      </div> */}
+
       <SectionHeader
         title={title}
         subtitle={subtitle}

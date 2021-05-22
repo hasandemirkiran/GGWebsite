@@ -1,53 +1,58 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
 import axios from "axios";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-
+import { Button } from "@material-ui/core";
+import "./FXTable.css";
 const styles = (theme) => ({
+  fxHeader: {
+    fontSize: 20,
+    paddingLeft: "20px",
+  },
   container: {
     padding: "0px!important",
     borderLeft: "6px solid #ae182d",
-    // background: "#eee",
+    background: "#eee",
+    width: "100%",
   },
   root: {
     border: "5px",
     paddingLeft: "8px",
     paddingTop: "0px",
-    // background: "#eee",
+    paddingBottom: "0px!important",
+    background: "#eee",
   },
+
   title: {
-    fontSize: 10,
+    fontSize: 13,
   },
   numberUSD: {
-    fontSize: 17,
-    color: "#C0C3A0",
+    fontSize: 21,
+    color: "#2D3848",
   },
   numberEUR: {
-    fontSize: 17,
-    color: "#C1CACD",
+    fontSize: 21,
+    color: "#2D3848",
   },
   numberGBP: {
-    fontSize: 17,
-    color: "#D1C5DA",
+    fontSize: 21,
+    color: "#2D3848",
   },
   numberXAU: {
-    fontSize: 17,
-    color: "#B8860B",
+    fontSize: 21,
+    color: "#2D3848",
   },
   numberXAG: {
-    fontSize: 17,
-    color: "#C0C0C0",
+    fontSize: 21,
+    color: "#2D3848",
   },
   numberXPT: {
-    fontSize: 17,
-    color: "#e5e4e2",
+    fontSize: 21,
+    color: "#2D3848",
   },
 });
 
@@ -90,18 +95,14 @@ class FXTable extends Component {
   };
 
   render() {
-    const settings = {
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 3000,
-    };
-
     const { classes } = this.props;
 
     return (
-      <Grid container spacing={3} className={classes.container}>
-        <Grid item xs={4}>
+      <Grid container spacing={2} className={classes.container}>
+        {/* <Grid item xs={12} className={classes.fxHeader}>
+          Piyasa Verileri
+        </Grid> */}
+        <Grid item>
           <Card className={classes.root} variant="outlined">
             <CardContent className={classes.root}>
               <Typography
@@ -111,7 +112,7 @@ class FXTable extends Component {
               >
                 <i
                   class="fas fa-dollar-sign"
-                  style={{ marginRight: 5, color: "#C0C3A0" }}
+                  style={{ marginRight: 5, color: "#AF182D" }}
                 ></i>
                 USD/TRY
               </Typography>
@@ -122,10 +123,14 @@ class FXTable extends Component {
               >
                 {parseFloat(this.state.rates["TRY"]).toFixed(4)}
               </Typography>
+              <div className="percentageIncrease">
+                <i className="fas fa-sort-up increaseIcon"></i>
+                <p>0.78</p>
+              </div>
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item>
           <Card className={classes.root} variant="outlined">
             <CardContent className={classes.root}>
               <Typography
@@ -135,7 +140,7 @@ class FXTable extends Component {
               >
                 <i
                   class="fas fa-euro-sign"
-                  style={{ marginRight: 5, color: "#C1CACD" }}
+                  style={{ marginRight: 5, color: "#AF182D" }}
                 ></i>
                 EUR/TRY
               </Typography>
@@ -148,10 +153,14 @@ class FXTable extends Component {
                   this.state.rates["TRY"] * (1 / this.state.rates["EUR"])
                 ).toFixed(4)}
               </Typography>
+              <div className="percentageDecrease">
+                <i className="fas fa-sort-down decreaseIcon"></i>
+                <p>-0.38</p>
+              </div>
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item>
           <Card className={classes.root} variant="outlined">
             <CardContent className={classes.root}>
               <Typography
@@ -161,7 +170,7 @@ class FXTable extends Component {
               >
                 <i
                   class="fas fa-pound-sign"
-                  style={{ marginRight: 5, color: "#D1C5DA" }}
+                  style={{ marginRight: 5, color: "#AF182D" }}
                 ></i>
                 GBP/TRY
               </Typography>
@@ -174,10 +183,14 @@ class FXTable extends Component {
                   this.state.rates["TRY"] * (1 / this.state.rates["GBP"])
                 ).toFixed(4)}
               </Typography>
+              <div className="percentageIncrease">
+                <i className="fas fa-sort-up increaseIcon"></i>
+                <p>1.78</p>
+              </div>
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item>
           <Card className={classes.root} variant="outlined">
             <CardContent className={classes.root}>
               <Typography
@@ -187,7 +200,7 @@ class FXTable extends Component {
               >
                 <i
                   class="fas fa-coins"
-                  style={{ marginRight: 5, color: "#B8860B" }}
+                  style={{ marginRight: 5, color: "#AF182D" }}
                 ></i>
                 XAU/TRY
               </Typography>
@@ -198,12 +211,23 @@ class FXTable extends Component {
               >
                 {parseFloat(
                   this.state.rates["TRY"] * (1 / this.state.rates["XAU"])
-                ).toFixed(4)}
+                ).toFixed(2)}
               </Typography>
+              <div className="percentageDecrease">
+                <i className="fas fa-sort-down decreaseIcon"></i>
+                <p>-2.78</p>
+              </div>
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <div className="fxInfo">
+          <Button color="primary" size="small">
+            Daha Fazla
+            <i class="fas fa-expand-arrows-alt"></i>
+          </Button>
+        </div>
+
+        {/* <Grid item>
           <Card className={classes.root} variant="outlined">
             <CardContent className={classes.root}>
               <Typography
@@ -213,7 +237,7 @@ class FXTable extends Component {
               >
                 <i
                   class="fas fa-coins"
-                  style={{ marginRight: 5, color: "#C0C0C0" }}
+                  style={{ marginRight: 5, color: "#AF182D" }}
                 ></i>
                 XAG/TRY
               </Typography>
@@ -228,8 +252,8 @@ class FXTable extends Component {
               </Typography>
             </CardContent>
           </Card>
-        </Grid>
-        <Grid item xs={4}>
+        </Grid> */}
+        {/* <Grid item>
           <Card className={classes.root} variant="outlined">
             <CardContent className={classes.root}>
               <Typography
@@ -239,7 +263,7 @@ class FXTable extends Component {
               >
                 <i
                   class="fas fa-coins"
-                  style={{ marginRight: 5, color: "#e5e4e2" }}
+                  style={{ marginRight: 5, color: "#AF182D" }}
                 ></i>
                 XPT/TRY
               </Typography>
@@ -254,7 +278,7 @@ class FXTable extends Component {
               </Typography>
             </CardContent>
           </Card>
-        </Grid>
+        </Grid> */}
       </Grid>
     );
   }

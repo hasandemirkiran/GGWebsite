@@ -1,0 +1,23 @@
+.percentageIncrease {
+  display: inline-flex;
+}
+
+.percentageDecrease {
+  display: inline-flex;
+}
+.increaseIcon {
+  margin-right: 5px;
+  padding-top: 6px;
+  color: green;
+}
+.decreaseIcon {
+  margin-right: 5px;
+  padding-bottom: 6px;
+  color: red;
+}
+
+.fxInfo {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: -0.5rem;
+}
