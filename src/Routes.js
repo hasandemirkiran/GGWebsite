@@ -69,6 +69,7 @@ import {
   LegalWarning as LegalWarningView,
   PrivacyTermsUse as PrivacyTermsUseView,
   ContactUs as ContactUsView,
+  FXPage as FXPageView,
 } from "./views";
 
 const Routes = () => {
@@ -642,6 +643,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={ContactUsView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/FX"
+        render={(matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={FXPageView}
             layout={MainLayout}
           />
         )}

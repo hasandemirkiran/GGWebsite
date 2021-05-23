@@ -77,3 +77,4 @@ export { default as Announcements } from "./Pages_Contact_Us/Announcements";
 export { default as LegalWarning } from "./Pages_Contact_Us/LegalWarning";
 export { default as PrivacyTermsUse } from "./Pages_Contact_Us/PrivacyTermsUse";
 export { default as ContactUs } from "./Pages_Contact_Us/ContactUs";
+export { default as FXPage } from "./Pages_Other/FXPage";

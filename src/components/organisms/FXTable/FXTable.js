@@ -221,7 +221,7 @@ class FXTable extends Component {
           </Card>
         </Grid>
         <div className="fxInfo">
-          <Button color="primary" size="small">
+          <Button color="primary" size="small" href="FX">
             Daha Fazla
             <i class="fas fa-plus-circle" style={{ marginLeft: "0.5rem" }}></i>
           </Button>
