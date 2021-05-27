@@ -38,23 +38,23 @@
         padding-left: 40px;
       }
       .currency-flag {
-        background: url("../images/aud.png") no-repeat left center;
-        background-size: 30px auto;
+        background: url("../images/newimages/turkey.png") no-repeat left center;
+        background-size: 20px auto;
         margin-left: 2rem;
-        &.CAD {
-          background-image: url("../images/cad.png");
-        }
         &.USD {
-          background-image: url("../images/usd.png");
+          background-image: url("../images/newimages/united-states.png");
         }
-        &.JPY {
-          background-image: url("../images/jpy.png");
-        }
-        &.NZD {
-          background-image: url("../images/nzd.png");
+        &.EUR {
+          background-image: url("../images/newimages/european-union.png");
         }
         &.GBP {
-          background-image: url("../images/gbp.png");
+          background-image: url("../images/newimages/united-kingdom.png");
+        }
+        &.XAU {
+          background-image: url("../images/newimages/ingot.png");
+        }
+        &.XAG {
+          background-image: url("../images/newimages/ingot.png");
         }
       }
       .input-group {

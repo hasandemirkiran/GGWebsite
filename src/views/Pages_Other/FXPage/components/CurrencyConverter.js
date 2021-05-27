@@ -102,17 +102,6 @@ class CurrencyConverter extends React.Component {
                 <span className="input-group-addon" id="basic-addon2">
                   {currencyA.code}
                 </span>
-                {/* <input
-                  type="number"
-                  value={currencyAval}
-                  className="form-control"
-                  aria-describedby="basic-addon2"
-                  step="1"
-                  pattern="\d\.\d{2}"
-                  onChange={(e) => {
-                    this.onChangeHandler(e, "A");
-                  }}
-                /> */}
               </div>
             </div>
 
@@ -135,17 +124,6 @@ class CurrencyConverter extends React.Component {
                     this.onChangeHandler(e, "B");
                   }}
                 />
-                {/* <input
-                  type="number"
-                  value={currencyBval}
-                  className="form-control"
-                  aria-describedby="basic-addon3"
-                  step="1"
-                  pattern="\d\.\d{2}"
-                  onChange={(e) => {
-                    this.onChangeHandler(e, "B");
-                  }}
-                /> */}
                 <span className="input-group-addon" id="basic-addon3">
                   {currencyB.code}
                 </span>
