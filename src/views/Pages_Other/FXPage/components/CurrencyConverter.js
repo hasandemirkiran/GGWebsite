@@ -90,7 +90,7 @@ class CurrencyConverter extends React.Component {
                 <form noValidate autoComplete="off">
                   <TextField
                     id="outlined-basic"
-                    value={currencyAval}
+                    value={parseFloat(parseFloat(currencyAval).toFixed(4))}
                     label="Tutar"
                     variant="outlined"
                     type="number"
@@ -116,7 +116,7 @@ class CurrencyConverter extends React.Component {
                 <span className="input-group-addon">{currencyB.sign}</span>
                 <TextField
                   id="outlined-basic"
-                  value={currencyBval}
+                  value={parseFloat(parseFloat(currencyBval).toFixed(4))}
                   label="Tutar"
                   variant="outlined"
                   type="number"
@@ -134,9 +134,11 @@ class CurrencyConverter extends React.Component {
           <div className="row">
             <div className="exchange-rate">
               <p>
-                <span className="exchange-rate-writing">Exchange Rate </span>
-                {`${currencyA.sign} ${currencyA.sellRate} ${currencyA.code}`} ={" "}
-                {`${currencyB.sign} ${currencyB.sellRate} ${currencyB.code}`}
+                <span className="exchange-rate-writing">Kambiyo Kuru</span>
+                {`${currencyB.sign} ${currencyA.sellRate} ${currencyB.code}`} ={" "}
+                {`${currencyA.sign} ${(1 / currencyB.sellRate).toFixed(4)} ${
+                  currencyA.code
+                }`}
               </p>
             </div>
           </div>
