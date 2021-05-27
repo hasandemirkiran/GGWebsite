@@ -25,9 +25,9 @@ const FXPage = () => {
 
   return (
     <div>
-      <Section className={classes.pagePaddingTop}>
+      <SectionAlternate>
         <DescriptionCta
-          title="İnsan Kaynakları"
+          title="Döviz Kurları"
           align={"left"}
           titleProps={{
             variant: "h3",
@@ -40,8 +40,8 @@ const FXPage = () => {
         />
         <Divider className={classes.divider} />
         <CurrencyConverter />
-      </Section>
-      <SectionAlternate></SectionAlternate>
+      </SectionAlternate>
+      <Section className={classes.pagePaddingTop}></Section>
 
       <Divider />
     </div>

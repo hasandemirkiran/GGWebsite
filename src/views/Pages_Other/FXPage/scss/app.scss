@@ -1,100 +1,133 @@
-body {
+.fx-wrapper {
+  body {
     padding: 50px 0;
     background-color: #222;
-}
-h1 {
+  }
+  h1 {
     text-align: center;
     margin-bottom: 18px;
-    color: #fff;
-    text-transform: uppercase;
-}
-header {
+    color: black;
+  }
+  header {
     margin-bottom: 20px;
     text-align: center;
     img {
-        max-width: 120px;
+      max-width: 120px;
     }
-}
-.content {
+  }
+  .content {
     background-color: #fff;
     padding: 20px;
     border-radius: 7px;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     .table {
-        margin-bottom: 0;
-        td,th {
-            vertical-align: middle
-        }
-        .mRight {
-            margin-right: 20px;
-        }
+      margin-bottom: 0;
+      td,
+      th {
+        vertical-align: middle;
+      }
+      .mRight {
+        margin-right: 20px;
+      }
     }
     .row {
-        margin-bottom: 20px;
-        h3 {
-            padding-left: 40px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      h3 {
+        padding-left: 40px;
+      }
+      .currency-flag {
+        background: url("../images/aud.png") no-repeat left center;
+        background-size: 30px auto;
+        margin-left: 2rem;
+        &.CAD {
+          background-image: url("../images/cad.png");
         }
-        .currency-flag {
-            background: url('../images/aud.png') no-repeat left center;
-            background-size: 30px auto;
-            &.CAD {background-image: url('../images/cad.png')}
-            &.USD {background-image: url('../images/usd.png')}
-            &.JPY {background-image: url('../images/jpy.png')}
-            &.NZD {background-image: url('../images/nzd.png')}
-            &.GBP {background-image: url('../images/gbp.png')}
+        &.USD {
+          background-image: url("../images/usd.png");
         }
+        &.JPY {
+          background-image: url("../images/jpy.png");
+        }
+        &.NZD {
+          background-image: url("../images/nzd.png");
+        }
+        &.GBP {
+          background-image: url("../images/gbp.png");
+        }
+      }
+      .input-group {
+        display: flex;
+        align-items: center;
+        padding-top: 1em;
+        padding-left: 1em;
+        background: #eee;
+        padding-bottom: 1em;
+        border-radius: 1rem;
+      }
+
+      .input-group-addon {
+        margin-right: 0.4rem;
+        font-weight: bolder;
+        margin-left: 0.2rem;
+      }
+
+      .exchange-rate {
+        .exchange-rate-writing {
+          font-weight: 700;
+        }
+      }
     }
     .row-select-currency {
-        text-align: center;
+      text-align: center;
     }
-    @media(min-width: 768px){
-
-        .currency-from-input {
-            position: relative;
-            padding-right: 20px;
-            &:after {
-                content: '=';
-                display: block;
-                position: absolute;
-                right: -8px;
-                bottom: 4px;
-                font-weight: bold;
-                font-size: 30px;
-                line-height: 0.9
-            }
+    @media (min-width: 768px) {
+      .currency-from-input {
+        position: relative;
+        padding-right: 40px;
+        &:after {
+          content: "=";
+          display: block;
+          position: absolute;
+          right: -8px;
+          bottom: 4px;
+          font-weight: bold;
+          font-size: 30px;
         }
-        .currency-to-input {
-            padding-left: 20px;
-        }
-
+      }
+      .currency-to-input {
+        padding-left: 40px;
+      }
     }
-}
-.message {
+  }
+  .message {
     text-align: center;
     &:only-child {
-        margin: 0;
+      margin: 0;
     }
-}
-.btn-sm {
+  }
+  .btn-sm {
     margin-right: 8px;
-}
-.form-inline {
+  }
+  .form-inline {
     margin: 10px auto;
     width: 235px;
     .btn-default {
-        margin-left: 5px;
+      margin-left: 5px;
     }
-}
-.credits {
+  }
+  .credits {
     text-align: center;
     color: #fff;
     padding: 70px;
-    opacity: .2;
+    opacity: 0.2;
     transition: opacity 0.3s linear;
     &:hover {
-        opacity: 1;
+      opacity: 1;
     }
     a {
-        color: #fff;
+      color: #fff;
     }
+  }
 }
