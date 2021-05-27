@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Divider } from "@material-ui/core";
 import { Section, SectionAlternate } from "components/organisms";
 import { SectionHeader, DescriptionCta } from "components/molecules";
+import CurrencyConverter from "./components/CurrencyConverter.js";
 
 const useStyles = makeStyles((theme) => ({
   pagePaddingTop: {
@@ -38,9 +39,10 @@ const FXPage = () => {
           }}
         />
         <Divider className={classes.divider} />
+        <CurrencyConverter />
       </Section>
+      <SectionAlternate></SectionAlternate>
 
-      <SectionAlternate innerNarrowed></SectionAlternate>
       <Divider />
     </div>
   );
