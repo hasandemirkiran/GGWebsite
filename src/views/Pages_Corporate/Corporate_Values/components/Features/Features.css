@@ -1,0 +1,23 @@
+.degerImageClass {
+  border-radius: 0px 50px 450px 50px;
+  max-width: 40rem;
+  box-shadow: rgba(175, 24, 45, 0.25) 0px 54px 55px,
+    rgba(175, 24, 45, 0.12) 0px -12px 30px, rgba(175, 24, 45, 0.12) 0px 4px 6px,
+    rgba(175, 24, 45, 0.17) 0px 12px 13px, rgba(175, 24, 45, 0.09) 0px -3px 5px;
+
+  /* box-shadow: rgb(175 24 45 / 40%) 5px 5px, rgb(175 24 45 / 30%) 10px 10px,
+    rgb(175 24 45 / 20%) 15px 15px, rgb(175 24 45 / 10%) 20px 20px,
+    rgb(175 24 45 / 5%) 25px 25px; */
+}
+
+.list-item {
+  color: #af182d;
+}
+
+.featuresWrapper {
+  background-color: #e5e5f7;
+  background-image: radial-gradient(#af182d 0.5px, transparent 0.5px),
+    radial-gradient(#af182d 0.5px, #fff 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
