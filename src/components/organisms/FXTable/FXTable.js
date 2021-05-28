@@ -98,136 +98,130 @@ class FXTable extends Component {
     const { classes } = this.props;
 
     return (
-      <Grid container spacing={2} className={classes.container}>
-        {/* <Grid item xs={12} className={classes.fxHeader}>
+      <div>
+        <Grid container spacing={2} className={classes.container}>
+          {/* <Grid item xs={12} className={classes.fxHeader}>
           Piyasa Verileri
         </Grid> */}
-        <Grid item>
-          <Card className={classes.root} variant="outlined">
-            <CardContent className={classes.root}>
-              <Typography
-                className={classes.title}
-                color="textSecondary"
-                gutterBottom
-              >
-                <i
-                  class="fas fa-dollar-sign"
-                  style={{ marginRight: 5, color: "#AF182D" }}
-                ></i>
-                USD/TRY
-              </Typography>
-              <Typography
-                variant="h6"
-                component="h2"
-                className={classes.numberUSD}
-              >
-                {parseFloat(this.state.rates["TRY"]).toFixed(4)}
-              </Typography>
-              <div className="percentageIncrease">
-                <i className="fas fa-sort-up increaseIcon"></i>
-                <p>0.78</p>
-              </div>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item>
-          <Card className={classes.root} variant="outlined">
-            <CardContent className={classes.root}>
-              <Typography
-                className={classes.title}
-                color="textSecondary"
-                gutterBottom
-              >
-                <i
-                  class="fas fa-euro-sign"
-                  style={{ marginRight: 5, color: "#AF182D" }}
-                ></i>
-                EUR/TRY
-              </Typography>
-              <Typography
-                variant="h6"
-                component="h2"
-                className={classes.numberEUR}
-              >
-                {parseFloat(
-                  this.state.rates["TRY"] * (1 / this.state.rates["EUR"])
-                ).toFixed(4)}
-              </Typography>
-              <div className="percentageDecrease">
-                <i className="fas fa-sort-down decreaseIcon"></i>
-                <p>-0.38</p>
-              </div>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item>
-          <Card className={classes.root} variant="outlined">
-            <CardContent className={classes.root}>
-              <Typography
-                className={classes.title}
-                color="textSecondary"
-                gutterBottom
-              >
-                <i
-                  class="fas fa-pound-sign"
-                  style={{ marginRight: 5, color: "#AF182D" }}
-                ></i>
-                GBP/TRY
-              </Typography>
-              <Typography
-                variant="h6"
-                component="h2"
-                className={classes.numberGBP}
-              >
-                {parseFloat(
-                  this.state.rates["TRY"] * (1 / this.state.rates["GBP"])
-                ).toFixed(4)}
-              </Typography>
-              <div className="percentageIncrease">
-                <i className="fas fa-sort-up increaseIcon"></i>
-                <p>1.78</p>
-              </div>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item>
-          <Card className={classes.root} variant="outlined">
-            <CardContent className={classes.root}>
-              <Typography
-                className={classes.title}
-                color="textSecondary"
-                gutterBottom
-              >
-                <i
-                  class="fas fa-coins"
-                  style={{ marginRight: 5, color: "#AF182D" }}
-                ></i>
-                XAU/TRY
-              </Typography>
-              <Typography
-                variant="h6"
-                component="h2"
-                className={classes.numberXAU}
-              >
-                {parseFloat(
-                  this.state.rates["TRY"] * (1 / this.state.rates["XAU"])
-                ).toFixed(2)}
-              </Typography>
-              <div className="percentageDecrease">
-                <i className="fas fa-sort-down decreaseIcon"></i>
-                <p>-2.78</p>
-              </div>
-            </CardContent>
-          </Card>
-        </Grid>
-        <div className="fxInfo">
-          <Button color="primary" size="small" href="FX">
-            Daha Fazla
-            <i class="fas fa-plus-circle" style={{ marginLeft: "0.5rem" }}></i>
-          </Button>
-        </div>
-
-        {/* <Grid item>
+          <Grid item>
+            <Card className={classes.root} variant="outlined">
+              <CardContent className={classes.root}>
+                <Typography
+                  className={classes.title}
+                  color="textSecondary"
+                  gutterBottom
+                >
+                  <i
+                    class="fas fa-dollar-sign"
+                    style={{ marginRight: 5, color: "#AF182D" }}
+                  ></i>
+                  USD/TRY
+                </Typography>
+                <Typography
+                  variant="h6"
+                  component="h2"
+                  className={classes.numberUSD}
+                >
+                  {parseFloat(this.state.rates["TRY"]).toFixed(4)}
+                </Typography>
+                <div className="percentageIncrease">
+                  <i className="fas fa-sort-up increaseIcon"></i>
+                  <p>0.78</p>
+                </div>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item>
+            <Card className={classes.root} variant="outlined">
+              <CardContent className={classes.root}>
+                <Typography
+                  className={classes.title}
+                  color="textSecondary"
+                  gutterBottom
+                >
+                  <i
+                    class="fas fa-euro-sign"
+                    style={{ marginRight: 5, color: "#AF182D" }}
+                  ></i>
+                  EUR/TRY
+                </Typography>
+                <Typography
+                  variant="h6"
+                  component="h2"
+                  className={classes.numberEUR}
+                >
+                  {parseFloat(
+                    this.state.rates["TRY"] * (1 / this.state.rates["EUR"])
+                  ).toFixed(4)}
+                </Typography>
+                <div className="percentageDecrease">
+                  <i className="fas fa-sort-down decreaseIcon"></i>
+                  <p>-0.38</p>
+                </div>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item>
+            <Card className={classes.root} variant="outlined">
+              <CardContent className={classes.root}>
+                <Typography
+                  className={classes.title}
+                  color="textSecondary"
+                  gutterBottom
+                >
+                  <i
+                    class="fas fa-pound-sign"
+                    style={{ marginRight: 5, color: "#AF182D" }}
+                  ></i>
+                  GBP/TRY
+                </Typography>
+                <Typography
+                  variant="h6"
+                  component="h2"
+                  className={classes.numberGBP}
+                >
+                  {parseFloat(
+                    this.state.rates["TRY"] * (1 / this.state.rates["GBP"])
+                  ).toFixed(4)}
+                </Typography>
+                <div className="percentageIncrease">
+                  <i className="fas fa-sort-up increaseIcon"></i>
+                  <p>1.78</p>
+                </div>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item>
+            <Card className={classes.root} variant="outlined">
+              <CardContent className={classes.root}>
+                <Typography
+                  className={classes.title}
+                  color="textSecondary"
+                  gutterBottom
+                >
+                  <i
+                    class="fas fa-coins"
+                    style={{ marginRight: 5, color: "#AF182D" }}
+                  ></i>
+                  XAU/TRY
+                </Typography>
+                <Typography
+                  variant="h6"
+                  component="h2"
+                  className={classes.numberXAU}
+                >
+                  {parseFloat(
+                    this.state.rates["TRY"] * (1 / this.state.rates["XAU"])
+                  ).toFixed(2)}
+                </Typography>
+                <div className="percentageDecrease">
+                  <i className="fas fa-sort-down decreaseIcon"></i>
+                  <p>-2.78</p>
+                </div>
+              </CardContent>
+            </Card>
+          </Grid>
+          {/* <Grid item>
           <Card className={classes.root} variant="outlined">
             <CardContent className={classes.root}>
               <Typography
@@ -253,7 +247,7 @@ class FXTable extends Component {
             </CardContent>
           </Card>
         </Grid> */}
-        {/* <Grid item>
+          {/* <Grid item>
           <Card className={classes.root} variant="outlined">
             <CardContent className={classes.root}>
               <Typography
@@ -279,7 +273,14 @@ class FXTable extends Component {
             </CardContent>
           </Card>
         </Grid> */}
-      </Grid>
+        </Grid>
+        <div className="fxInfo">
+          <Button color="primary" size="small" href="FX">
+            Daha Fazla
+            <i class="fas fa-plus-circle" style={{ marginLeft: "0.5rem" }}></i>
+          </Button>
+        </div>
+      </div>
     );
   }
 }
