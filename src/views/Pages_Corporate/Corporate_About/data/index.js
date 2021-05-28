@@ -79,8 +79,8 @@ export const companies = [
 export const mapData = [
   {
     location: {
-      y: 41.0082,
-      x: 28.9784,
+      y: 41.06864998349129,
+      x: 29.005877233736687,
       address: "Via A.G. Alaimo 147, 55027",
     },
   },
