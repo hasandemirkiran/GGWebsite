@@ -58,8 +58,7 @@ const Features = (props) => {
             <Section>
               <>
                 <SectionHeader
-                  title="Degerlerimiz"
-                  subtitle="Bizi biz yapan degerler."
+                  title="DEĞERLERİMİZ"
                   align="left"
                   data-aos="fade-up"
                   titleProps={{
