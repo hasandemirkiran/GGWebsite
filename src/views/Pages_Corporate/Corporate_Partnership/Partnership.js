@@ -60,11 +60,11 @@ const Partnership = () => {
       <Section className={classes.pieChart}>
         <PieChart
           data={[
-            { title: "Emir KAYA", value: 36, color: "#6dd3ce" },
-            { title: "Salih BERBEROGLU", value: 32, color: "#c8e9a0" },
-            { title: "Ahmet DAGLI", value: 14, color: "#f7a278" },
-            { title: "Recep KABA", value: 14, color: "#a13d63" },
-            { title: "Mustafa AKIN", value: 4, color: "#351e29" },
+            { title: "Emir KAYA", value: 36, color: "#af182d" },
+            { title: "Salih BERBEROGLU", value: 32, color: "#ca808a" },
+            { title: "Ahmet DAGLI", value: 14, color: "#D8B4B8" },
+            { title: "Recep KABA", value: 14, color: "#DFCECF" },
+            { title: "Mustafa AKIN", value: 4, color: "#E5E7E6" },
           ]}
           label={({ dataEntry }) => Math.round(dataEntry.percentage) + "%"}
           labelStyle={{
