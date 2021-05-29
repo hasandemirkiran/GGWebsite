@@ -16,6 +16,7 @@ import { Section } from "components/organisms";
 
 // import image
 import degerImage from "../../../../../assets/images/pngdegerlerimiz.png";
+import listIcon from "./value.svg";
 
 import "./Features.css";
 
@@ -72,7 +73,7 @@ const Features = (props) => {
                   {data.map((item, index) => (
                     <ListItem disableGutters key={index} data-aos="fade-up">
                       <ListItemAvatar>
-                        <i class="fas fa-check-square list-item"></i>
+                        <img src={listIcon} className="list-item"></img>
                       </ListItemAvatar>
                       <Typography
                         variant="body1"

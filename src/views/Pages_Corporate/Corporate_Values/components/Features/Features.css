@@ -1,7 +1,7 @@
 .degerImageClass {
-  border-radius: 150px 50px 150px 50px;
-  max-width: 30rem;
-  margin: 10rem 0rem 10rem 5rem;
+  border-radius: 0px 50px 150px 50px;
+  width: 100%;
+  max-width: 40rem;
   box-shadow: rgba(175, 24, 45, 0.25) 0px 54px 55px,
     rgba(175, 24, 45, 0.12) 0px -12px 30px, rgba(175, 24, 45, 0.12) 0px 4px 6px,
     rgba(175, 24, 45, 0.17) 0px 12px 13px, rgba(175, 24, 45, 0.09) 0px -3px 5px;
@@ -13,6 +13,7 @@
 
 .list-item {
   color: #af182d;
+  max-width: 1rem;
 }
 
 .featuresWrapper {
