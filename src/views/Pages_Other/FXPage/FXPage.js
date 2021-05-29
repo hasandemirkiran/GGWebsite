@@ -2,8 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Divider } from "@material-ui/core";
 import { Section, SectionAlternate } from "components/organisms";
-import { SectionHeader, DescriptionCta } from "components/molecules";
 import CurrencyConverter from "./components/CurrencyConverter.js";
+import FXDescription from "./components/FXDescription.js";
 
 const useStyles = makeStyles((theme) => ({
   pagePaddingTop: {
@@ -26,23 +26,11 @@ const FXPage = () => {
   return (
     <div>
       <SectionAlternate>
-        <DescriptionCta
-          title="Döviz Kurları"
-          align={"left"}
-          titleProps={{
-            variant: "h3",
-            className: classes.title,
-            color: "textPrimary",
-          }}
-          subtitleProps={{
-            color: "textPrimary",
-          }}
-        />
+        <FXDescription />
         <Divider className={classes.divider} />
         <CurrencyConverter />
       </SectionAlternate>
       <Section className={classes.pagePaddingTop}></Section>
-
       <Divider />
     </div>
   );
