@@ -2,8 +2,11 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Divider } from "@material-ui/core";
 import { Section, SectionAlternate } from "components/organisms";
+
+// import components
 import CurrencyConverter from "./components/CurrencyConverter.js";
 import FXDescription from "./components/FXDescription.js";
+import CurrencyTable from "./components/CurrencyTable.js";
 
 const useStyles = makeStyles((theme) => ({
   pagePaddingTop: {
@@ -30,7 +33,9 @@ const FXPage = () => {
         <Divider className={classes.divider} />
         <CurrencyConverter />
       </SectionAlternate>
-      <Section className={classes.pagePaddingTop}></Section>
+      <Section className={classes.pagePaddingTop}>
+        <CurrencyTable />
+      </Section>
       <Divider />
     </div>
   );
