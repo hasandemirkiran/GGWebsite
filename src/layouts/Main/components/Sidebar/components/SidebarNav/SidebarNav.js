@@ -56,9 +56,10 @@ const SidebarNav = (props) => {
   const { pages, onClose, className, ...rest } = props;
   const classes = useStyles();
 
-  const landings = pages.landings;
-  const supportedPages = pages.pages;
-  const account = pages.account;
+  const corporate = pages.corporate;
+  const services = pages.services;
+  const investor = pages.investor;
+  const contact = pages.contact;
 
   const MenuGroup = (props) => {
     const { item } = props;
@@ -91,58 +92,50 @@ const SidebarNav = (props) => {
     );
   };
 
-  const LandingPages = () => {
-    const { services, apps, web } = landings.children;
+  const CorporatePages = () => {
+    const { corporateChildren } = corporate.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
-          <MenuGroup item={services} />
-          <MenuGroup item={apps} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={web} />
+          <MenuGroup item={corporateChildren} />
         </div>
       </div>
     );
   };
 
-  const SupportedPages = () => {
-    const {
-      career,
-      helpCenter,
-      company,
-      contact,
-      blog,
-      portfolio,
-    } = supportedPages.children;
+  const ServicesPages = () => {
+    const { credit, trade, treasury, others } = services.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
-          <MenuGroup item={career} />
-          <MenuGroup item={helpCenter} />
-          <MenuGroup item={company} />
+          <MenuGroup item={credit} />
+          <MenuGroup item={others} />
         </div>
         <div className={classes.menuItem}>
-          <MenuGroup item={contact} />
-          <MenuGroup item={blog} />
-          <MenuGroup item={portfolio} />
+          <MenuGroup item={trade} />
+          <MenuGroup item={treasury} />
         </div>
       </div>
     );
   };
 
-  const AccountPages = () => {
-    const { settings, signup, signin, password, error } = account.children;
+  const InvestorPages = () => {
+    const { investorChildren } = investor.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
-          <MenuGroup item={settings} />
-          <MenuGroup item={signup} />
+          <MenuGroup item={investorChildren} />
         </div>
+      </div>
+    );
+  };
+
+  const ContactPages = () => {
+    const { contacts } = contact.children;
+    return (
+      <div className={classes.menu}>
         <div className={classes.menuItem}>
-          <MenuGroup item={signin} />
-          <MenuGroup item={password} />
-          <MenuGroup item={error} />
+          <MenuGroup item={contacts} />
         </div>
       </div>
     );
@@ -156,36 +149,28 @@ const SidebarNav = (props) => {
         </ListItemIcon>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Typography variant="h6" color="textPrimary" gutterBottom>
-          Landings
-        </Typography>
-        <LandingPages />
+        <CorporatePages />
       </ListItem>
       <ListItem className={classes.listItem}>
         <Divider className={classes.divider} />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Typography variant="h6" color="textPrimary" gutterBottom>
-          Pages
-        </Typography>
-        <SupportedPages />
+        <ServicesPages />
       </ListItem>
       <ListItem className={classes.listItem}>
         <Divider className={classes.divider} />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Typography variant="h6" color="textPrimary" gutterBottom>
-          Account
-        </Typography>
-        <AccountPages />
+        <InvestorPages />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          variant="outlined"
-          fullWidth
-          component="a"
-          href="/documentation"
-        >
+        <Divider className={classes.divider} />
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <ContactPages />
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button variant="outlined" fullWidth component="a" href="/">
           Documentation
         </Button>
       </ListItem>
