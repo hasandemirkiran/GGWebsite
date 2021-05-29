@@ -1,5 +1,6 @@
 import { createMuiTheme, responsiveFontSizes } from "@material-ui/core";
 import { light, dark } from "./palette";
+import "./theme.css";
 
 const getTheme = (mode) =>
   responsiveFontSizes(
