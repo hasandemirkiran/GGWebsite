@@ -127,7 +127,7 @@ const Hero = ({ themeMode = "light", className, ...rest }) => {
       variant="outlined"
       color="primary"
       component="a"
-      href="/documentation"
+      href="/"
     >
       Hakkimizda
     </Button>
