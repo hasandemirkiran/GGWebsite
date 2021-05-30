@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontWeight: "bold",
+    borderLeft: "6px solid #ae182d",
   },
   items: {
     fontSize: 22,
@@ -64,9 +65,6 @@ const Features = (props) => {
                   data-aos="fade-up"
                   titleProps={{
                     className: clsx(classes.text, classes.title),
-                  }}
-                  subtitleProps={{
-                    className: classes.text,
                   }}
                 />
                 <List>
