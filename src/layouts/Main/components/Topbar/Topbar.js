@@ -362,7 +362,23 @@ const Topbar = ({
         </List>
       </Hidden>
       <Hidden mdUp>
-        <DarkModeToggler themeMode={themeMode} onClick={() => themeToggler()} />
+        <FormControl
+          variant="filled"
+          className={classes.formControl}
+          style={{ marginTop: "1rem" }}
+        >
+          <InputLabel id="demo-simple-select-outlined-label">Dil</InputLabel>
+          <Select
+            labelId="demo-simple-select-outlined-label"
+            id="demo-simple-select-outlined"
+            // value={age}
+            // onChange={handleChange}
+            label="Age"
+          >
+            <MenuItem value={10}>Türkçe</MenuItem>
+            <MenuItem value={20}>İngilizce</MenuItem>
+          </Select>
+        </FormControl>{" "}
         <IconButton
           className={classes.iconButton}
           onClick={onSidebarOpen}
