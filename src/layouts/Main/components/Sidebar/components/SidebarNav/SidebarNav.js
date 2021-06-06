@@ -171,7 +171,7 @@ const SidebarNav = (props) => {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button variant="outlined" fullWidth component="a" href="/">
-          Documentation
+          Bilgi Al
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>

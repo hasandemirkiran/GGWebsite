@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
   logoContainer: {
     maxWidth: "5rem",
     [theme.breakpoints.up("md")]: {
-      maxWidth: "4rem",
+      maxWidth: "5rem",
     },
   },
   logoImage: {
