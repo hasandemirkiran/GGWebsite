@@ -40,8 +40,10 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 0,
   },
   logoContainer: {
-    width: 120,
-    height: 50,
+    maxWidth: "5rem",
+    [theme.breakpoints.up("md")]: {
+      maxWidth: "5rem",
+    },
   },
   logoImage: {
     width: "100%",
