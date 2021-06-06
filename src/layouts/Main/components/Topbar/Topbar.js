@@ -16,6 +16,10 @@ import {
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Image, DarkModeToggler } from "components/atoms";
+import Select from "@material-ui/core/Select";
+import InputLabel from "@material-ui/core/InputLabel";
+import FormControl from "@material-ui/core/FormControl";
+import MenuItem from "@material-ui/core/MenuItem";
 
 //import logo
 import horizontalLightRed from "../../../../assets/images/logo/horizontalLightRed.png";
@@ -320,10 +324,26 @@ const Topbar = ({
           <ListItem
             className={clsx(classes.listItem, "menu-item--no-dropdown")}
           >
-            <DarkModeToggler
+            {/* <DarkModeToggler
               themeMode={themeMode}
               onClick={() => themeToggler()}
-            />
+            /> */}
+
+            <FormControl variant="filled" className={classes.formControl}>
+              <InputLabel id="demo-simple-select-outlined-label">
+                Dil
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-outlined-label"
+                id="demo-simple-select-outlined"
+                // value={age}
+                // onChange={handleChange}
+                label="Age"
+              >
+                <MenuItem value={10}>Türkçe</MenuItem>
+                <MenuItem value={20}>İngilizce</MenuItem>
+              </Select>
+            </FormControl>
           </ListItem>
           <ListItem
             className={clsx(classes.listItem, "menu-item--no-dropdown")}
