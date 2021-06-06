@@ -12,47 +12,57 @@ const styles = (theme) => ({
   fxHeader: {
     fontSize: 20,
     paddingLeft: "20px",
+    fontFamily: "sans-serif",
   },
   container: {
     padding: "0px!important",
     borderLeft: "6px solid #ae182d",
     background: "#eee",
     width: "100%",
+    fontFamily: "sans-serif",
   },
   root: {
     border: "5px",
-    paddingLeft: "8px",
+    paddingLeft: "4px",
     paddingTop: "0px",
     paddingBottom: "0px!important",
     background: "#eee",
+    fontFamily: "sans-serif",
   },
 
   title: {
     fontSize: 13,
+    fontFamily: "sans-serif",
   },
   numberUSD: {
     fontSize: 21,
     color: "#2D3848",
+    fontFamily: "sans-serif",
   },
   numberEUR: {
     fontSize: 21,
     color: "#2D3848",
+    fontFamily: "sans-serif",
   },
   numberGBP: {
     fontSize: 21,
     color: "#2D3848",
+    fontFamily: "sans-serif",
   },
   numberXAU: {
     fontSize: 21,
     color: "#2D3848",
+    fontFamily: "sans-serif",
   },
   numberXAG: {
     fontSize: 21,
     color: "#2D3848",
+    fontFamily: "sans-serif",
   },
   numberXPT: {
     fontSize: 21,
     color: "#2D3848",
+    fontFamily: "sans-serif",
   },
 });
 
