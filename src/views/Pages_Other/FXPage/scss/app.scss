@@ -56,6 +56,9 @@
         &.XAG {
           background-image: url("../images/newimages/ingot.png");
         }
+        @media (max-width: 768px) {
+          font-size: x-small;
+        }
       }
       .input-group {
         display: flex;
