@@ -26,13 +26,13 @@ const data = {
     },
     {
       code: "XAU",
-      sellRate: (1 / 8.5165) * 0.00052695,
+      sellRate: (1 / 8.5165) * 0.00053269,
       name: "Altın",
       sign: "",
     },
     {
       code: "XAG",
-      sellRate: (1 / 8.5165) * 0.00052695,
+      sellRate: (1 / 8.5165) * 0.03581638,
       name: "Gümüş",
       sign: "",
     },

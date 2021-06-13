@@ -4,9 +4,7 @@ import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 
 const SelectCurrency = ({ currencies, onSelectCurrency }) => {
-  const filteredCurrencies = currencies.filter(
-    (currency) => currency.code !== "AUD"
-  );
+  const filteredCurrencies = currencies.filter((currency) => currency.code);
 
   return (
     <TextField

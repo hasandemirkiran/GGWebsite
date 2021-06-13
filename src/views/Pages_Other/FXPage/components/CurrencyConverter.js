@@ -17,11 +17,22 @@ class CurrencyConverter extends React.Component {
       currencyBval: data.currencies[1].sellRate,
     };
 
-    this.onSelectCurrency = this.onSelectCurrency.bind(this);
+    this.onSelectCurrency_A = this.onSelectCurrency_A.bind(this);
+    this.onSelectCurrency_B = this.onSelectCurrency_B.bind(this);
   }
 
-  onSelectCurrency(code) {
+  onSelectCurrency_A(code) {
     console.log("selecting currency: " + code);
+    const { currencies, currencyBval } = this.state;
+    const currency = currencies.filter((currency) => currency.code === code);
+    this.setState({
+      currencyA: currency[0], // this is an array with one item
+      currencyAval: currencyBval * currency[0].sellRate,
+    });
+  }
+
+  onSelectCurrency_B(code) {
+    console.log("selecting currency B: " + code);
     const { currencies, currencyAval } = this.state;
     const currency = currencies.filter((currency) => currency.code === code);
     this.setState({
@@ -37,12 +48,12 @@ class CurrencyConverter extends React.Component {
       const newValueA = e.target.value;
       this.setState({
         currencyAval: newValueA,
-        currencyBval: newValueA * currencyB.sellRate,
+        currencyBval: (newValueA * currencyB.sellRate) / currencyA.sellRate,
       });
     } else if (currency === "B") {
       const newValueB = e.target.value;
       this.setState({
-        currencyAval: newValueB / currencyB.sellRate,
+        currencyAval: (newValueB / currencyB.sellRate) * currencyA.sellRate,
         currencyBval: newValueB,
       });
     }
@@ -71,7 +82,19 @@ class CurrencyConverter extends React.Component {
                 }
                 <SelectCurrency
                   currencies={currencies}
-                  onSelectCurrency={this.onSelectCurrency}
+                  onSelectCurrency={this.onSelectCurrency_A}
+                />
+              </p>
+            </div>
+
+            <div className="col-md-6 col-md-offset-3">
+              <p>
+                {
+                  //Select currency
+                }
+                <SelectCurrency
+                  currencies={currencies}
+                  onSelectCurrency={this.onSelectCurrency_B}
                 />
               </p>
             </div>
