@@ -58,6 +58,10 @@
         }
         @media (max-width: 768px) {
           font-size: x-small;
+
+          .col-select-currency-A {
+            padding-right: 4rem;
+          }
         }
       }
       .input-group {
@@ -84,6 +88,14 @@
     }
     .row-select-currency {
       text-align: center;
+      .col-select-currency-A {
+        padding-right: 16rem;
+      }
+      @media (max-width: 768px) {
+        .col-select-currency-A {
+          padding-right: 4rem;
+        }
+      }
     }
     @media (min-width: 768px) {
       .currency-from-input {

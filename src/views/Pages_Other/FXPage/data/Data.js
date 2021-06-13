@@ -15,7 +15,7 @@ const data = {
     {
       code: "EUR",
       sellRate: (1 / 8.5165) * 0.819759,
-      name: "Avrupa Para Birimi",
+      name: "Avro",
       sign: "€",
     },
     {

@@ -75,7 +75,7 @@ class CurrencyConverter extends React.Component {
         </header>
         <div className="content">
           <div className="row row-select-currency">
-            <div className="col-md-6 col-md-offset-3">
+            <div className="col-md-6 col-md-offset-3 col-select-currency-A">
               <p>
                 {
                   //Select currency
@@ -87,7 +87,7 @@ class CurrencyConverter extends React.Component {
               </p>
             </div>
 
-            <div className="col-md-6 col-md-offset-3">
+            <div className="col-md-6 col-md-offset-3 col-select-currency-B">
               <p>
                 {
                   //Select currency
