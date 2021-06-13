@@ -38,14 +38,13 @@ const IndexView = ({ themeMode }) => {
           marginLeft: "0",
           paddingRight: "0",
           marginRight: "0",
-          maxWidth: "fit-content",
+          maxWidth: "initial",
         }}
       >
         <img
           src={image1}
           style={{
             width: "100%",
-            maxWidth: "fit-content",
           }}
         ></img>
       </Section>
@@ -58,7 +57,7 @@ const IndexView = ({ themeMode }) => {
           marginLeft: "0",
           paddingRight: "0",
           marginRight: "0",
-          maxWidth: "fit-content",
+          maxWidth: "initial",
         }}
       >
         <img
@@ -66,7 +65,6 @@ const IndexView = ({ themeMode }) => {
           style={{ width: "100%" }}
           style={{
             width: "100%",
-            maxWidth: "fit-content",
           }}
         ></img>
       </Section>
@@ -79,7 +77,7 @@ const IndexView = ({ themeMode }) => {
           marginLeft: "0",
           paddingRight: "0",
           marginRight: "0",
-          maxWidth: "fit-content",
+          maxWidth: "initial",
         }}
       >
         <img
@@ -87,7 +85,6 @@ const IndexView = ({ themeMode }) => {
           style={{ width: "100%" }}
           style={{
             width: "100%",
-            maxWidth: "fit-content",
           }}
         ></img>
       </Section>
